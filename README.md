@@ -300,5 +300,51 @@ int diaAño = LocalDate.now().getDayOfYear();
 <h3 align="center">Métodos de Comparación de Fechas:</h3>
 
 <h3>isEqual()</h3>
+
 -    <b>Descripción</b>: Compara si la fecha es igual a otra fecha.
--    <b>Ejemplo</b>
+  
+-    <b>Ejemplo:</b>
+
+```java
+LocalDate fechaActual = LocalDate.now();
+LocalDate otraFecha = LocalDate.of(2022, 2, 26);
+boolean esIgual = fechaActual.isEqual(otraFecha);
+```
+
+<h3>isBefore()</h3>
+
+-    <b>Descripción</b>: Compara si la fecha es anterior a otra fecha.
+
+-    <b>Ejemplo:</b>
+
+```java
+LocalDate fechaActual = LocalDate.now();
+LocalDate otraFecha = LocalDate.of(2022, 2, 26);
+boolean esAntes = fechaActual.isBefore(otraFecha);
+```
+
+<h3>isAfter()</h3>
+
+-    <b>Descripción</b>: Compara si la fecha es posterior a otra fecha.
+
+-    <b>Ejemplo:</b>
+
+```java
+LocalDate fechaActual = LocalDate.now();
+LocalDate otraFecha = LocalDate.of(2022, 2, 26);
+boolean esDespues = fechaActual.isAfter(otraFecha);
+```
+
+<h3 align="center">Métodos de Verificación de Propiedades de Fecha:</h3>
+
+<h3>isLeapYear()</h3>
+
+-    <b>Descripción</b>: Verifica si el año de la fecha es un año bisiesto.
+
+-    <b>Ejemplo:</b>
+
+```java
+boolean esBisiesto = LocalDate.now().isLeapYear();
+```
+
+<p>Estos métodos <b>'is'</b> son útiles para realizar comparaciones y verificar propiedades específicas de las fechas en el programa. Se puede utilizar según las necesidades de la aplicación para tomar decisiones basadas en la relación temporal entre diferentes fechas.</p>
