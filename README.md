@@ -84,7 +84,7 @@ LocalTime horaActual = LocalTime.now();
 
 <p>Estas clases facilitan la manipulación y representación de fechas y horas en aplicaciones Java, proporcionando una API más moderna y flexible. Se pueden realizar operaciones como comparaciones, adiciones y sustracciones de tiempo de manera más intuitiva y sin preocuparse por la complejidad asociada con las clases antiguas Date y Calendar.</p>
 
-<h2 align="center">LocalDate.now()</h2>
+<h2 align="center">'LocalDate.now()'</h2>
 
 <p>El método <b>'LocalDate.now()'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para obtener la fecha actual del sistema en la zona horaria predeterminada.</p>
 
@@ -101,3 +101,34 @@ LocalDate fechaActual = LocalDate.now();
         -    La instancia LocalDate generada no tiene información sobre la hora específica del día, solo representa el año, mes y día.
 
 <p>Este método es útil cuando se necesita trabajar con fechas y no se esta interesado en la información de la hora o la zona horaria. Proporciona una forma sencilla de obtener la fecha actual en el formato LocalDate para su posterior manipulación en tu programa.</p>
+
+<h2 align="center">'LocalDate.of()'</h2>
+
+<p>El método <b>'LocalDate.of(int año, int mes, int día)'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para crear una instancia de LocalDate con una fecha específica.</p>
+
+-    <b>Descripción:</b> Crea una instancia de LocalDate con la fecha especificada.
+-    <b>Parámetros:</b>
+    -    <b>año</b>: El año deseado.
+    -    <b>mes</b>: El mes deseado (1 para enero, 2 para febrero, etc.).
+    -    <b>día</b>: El día deseado del mes.
+-    <b>Uso</b>:
+
+```java
+LocalDate fechaPersonalizada = LocalDate.of(2022, 2, 26);
+```
+
+<p>Este método es útil cuando se necesita trabajar con fechas específicas y se desea crear instancias de LocalDate con valores precisos para su posterior manipulación en tu programa.</p>
+
+<h2 align="center">'LocalDate.pare()'</h2>
+
+<p>El método <b>'LocalDate.parse(CharSequence texto)'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para crear una instancia de LocalDate a partir de una representación en formato de texto.</p>
+
+-    <b>Descripción:</b> Convierte una cadena en un objeto LocalDate utilizando el formato ISO (yyyy-MM-dd).
+-    <b>Parámetro:</b>
+        -    <b>texto:</b> La cadena que representa la fecha en formato ISO.
+-    <b>Uso:</b>
+
+```java
+LocalDate fechaParseada = LocalDate.parse("2022-02-26");
+```
+<p>Este método es útil cuando se necesita obtener un objeto LocalDate a partir de una cadena que representa una fecha. Se debe asegurar de que la cadena de entrada esté en un formato válido para evitar excepciones durante el proceso de parseo.</p>
