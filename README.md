@@ -90,10 +90,11 @@ LocalTime horaActual = LocalTime.now();
 
 -    <b>Descripción</b>: Retorna una instancia de LocalDate que representa la fecha actual.
 
--    <b>Uso</b>:
+-    <b>Ejemplo</b>:
 
 ```java
 LocalDate fechaActual = LocalDate.now();
+System.out.println("Fecha actual: " + fechaActual);
 ```
 
 -    <b>Características</b>:
@@ -111,24 +112,68 @@ LocalDate fechaActual = LocalDate.now();
     -    <b>año</b>: El año deseado.
     -    <b>mes</b>: El mes deseado (1 para enero, 2 para febrero, etc.).
     -    <b>día</b>: El día deseado del mes.
--    <b>Uso</b>:
+-    <b>Ejemplo</b>:
 
 ```java
 LocalDate fechaPersonalizada = LocalDate.of(2022, 2, 26);
+System.out.println("Fecha personalizada: " + fechaPersonalizada);
 ```
 
 <p>Este método es útil cuando se necesita trabajar con fechas específicas y se desea crear instancias de LocalDate con valores precisos para su posterior manipulación en tu programa.</p>
 
-<h2 align="center">'LocalDate.pare()'</h2>
+<h2 align="center">'LocalDate.parse()'</h2>
 
 <p>El método <b>'LocalDate.parse(CharSequence texto)'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para crear una instancia de LocalDate a partir de una representación en formato de texto.</p>
 
 -    <b>Descripción:</b> Convierte una cadena en un objeto LocalDate utilizando el formato ISO (yyyy-MM-dd).
 -    <b>Parámetro:</b>
         -    <b>texto:</b> La cadena que representa la fecha en formato ISO.
--    <b>Uso:</b>
+-    <b>Ejemplo:</b>
 
 ```java
 LocalDate fechaParseada = LocalDate.parse("2022-02-26");
+System.out.println("Fecha parseada: " + fechaParseada);
 ```
 <p>Este método es útil cuando se necesita obtener un objeto LocalDate a partir de una cadena que representa una fecha. Se debe asegurar de que la cadena de entrada esté en un formato válido para evitar excepciones durante el proceso de parseo.</p>
+
+<h2 align="center">'LocalDate.now().plus'</h2>
+
+<p>El método <b>'LocalDate.now().plus'</b> en Java permite agregar una cantidad específica de días, semanas, meses o años a la fecha actual obtenida mediante LocalDate.now().</p>
+
+<h3>plusDays()</h3>
+-    <b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de días añadidos.
+-    <b>Ejemplo</b>:
+
+```java
+LocalDate fechaFutura = LocalDate.now().plusDays(5);
+System.out.println("Fecha futura: " + fechaFutura);
+```
+
+<h3>plusWeeks()</h3>
+-    <b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de semanas añadidas.
+-    <b>Ejemplo</b>:
+
+```java
+LocalDate fechaFutura = LocalDate.now().plusWeeks(2);
+System.out.println("Fecha futura: " + fechaFutura);
+```
+
+<h3>plusMonths()</h3>
+<b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de meses añadidos.
+<b>Ejemplo</b>:
+
+```java
+LocalDate fechaFutura = LocalDate.now().plusMonths(3);
+System.out.println("Fecha futura: " + fechaFutura);
+```
+
+<h3>plusYears()</h3>
+-    <b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de años añadidos.
+-    <b>Ejemplo</b>:
+
+```java
+LocalDate fechaFutura = LocalDate.now().plusYears(1);
+System.out.println("Fecha futura: " + fechaFutura);
+```
+
+<p>Estos métodos  permiten manipular la fecha actual y obtener una nueva fecha ajustada según las necesidades específicas. Se puede ajustar la fecha agregando días, semanas, meses o años según el contexto de la aplicación.</p>
