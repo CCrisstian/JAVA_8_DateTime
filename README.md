@@ -186,3 +186,119 @@ System.out.println("Fecha futura: " + fechaFutura);
 ```
 
 <p>Estos métodos  permiten manipular la fecha actual y obtener una nueva fecha ajustada según las necesidades específicas. Se puede ajustar la fecha agregando días, semanas, meses o años según el contexto de la aplicación.</p>
+
+<h2>'LocalDate.now().minus'</h2>
+
+<p>El método <b>'LocalDate.now().minus'</b> en Java permite restar una cantidad específica de días, semanas, meses o años a la fecha actual obtenida mediante LocalDate.now().</p>
+
+<h3>minusDays()</h3>
+
+-    <b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de días restados.
+
+-    <b>Ejemplo</b>:
+
+```java
+LocalDate fechaPasada = LocalDate.now().minusDays(5);
+System.out.println("Fecha pasada: " + fechaPasada);
+```
+
+<h3>minusWeeks()</h3>
+
+-    <b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de semanas restadas.
+
+-    <b>Ejemplo</b>:
+
+```java
+LocalDate fechaPasada = LocalDate.now().minusWeeks(2);
+System.out.println("Fecha pasada: " + fechaPasada);
+```
+
+<h3>minusMonths()</h3>
+
+-    <b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de meses restados.
+
+-    <b>Ejemplo:</b>
+
+```java
+LocalDate fechaPasada = LocalDate.now().minusMonths(3);
+System.out.println("Fecha pasada: " + fechaPasada);
+```
+
+<h3>minusYears()</h3>
+
+-    <b>Descripción</b>: Retorna una copia de la fecha actual con la cantidad especificada de años restados.
+
+-    <b>Ejemplo:</b>
+
+```java
+LocalDate fechaPasada = LocalDate.now().minusYears(1);
+System.out.println("Fecha pasada: " + fechaPasada);
+```
+
+<p>Estos métodos permiten manipular la fecha actual y obtener una nueva fecha ajustada restando días, semanas, meses o años según necesidades específicas. Se puede utilizarlos para calcular fechas en el pasado.</p>
+
+<h2 align="center">'LocalDate.__.get'</h2>
+
+<p>La clase LocalDate en Java proporciona métodos para obtener diferentes componentes de una fecha.</p>
+
+<h3>getYear()</h3>
+
+-    <b>Descripción</b>: Devuelve el año de la fecha.
+
+-    <b>Ejemplo:</b>
+
+```java
+int año = LocalDate.now().getYear();
+```
+
+<h3>getMonth()</h3>
+
+-    <b>Descripción</b>: Devuelve el mes de la fecha como un objeto Month.
+
+-    <b>Ejemplo:</b>
+
+```java
+Month mes = LocalDate.now().getMonth();
+```
+
+<h3>getDayOfMonth()</h3>
+
+-    <b>Descripción</b>: Devuelve el día del mes.
+
+-    <b>Ejemplo:</b>
+
+```java
+int dia = LocalDate.now().getDayOfMonth();
+```
+
+<h3>getDayOfWeek()</h3>
+
+-    <b>Descripción</b>: Devuelve el día de la semana como un objeto DayOfWeek.
+
+-    <b>Ejemplo:</b>
+
+```java
+DayOfWeek diaSemana = LocalDate.now().getDayOfWeek();
+```
+
+<h3>getDayOfYear()</h3>
+
+-    <b>Descripción</b>: Devuelve el día del año.
+
+-    <b>Ejemplo:</b>
+
+```java
+int diaAño = LocalDate.now().getDayOfYear();
+```
+
+<p>Estos métodos permiten obtener información específica sobre la fecha actual o cualquier otra fecha que se esté manipulando en el programa. Se puede utilizar estos valores para realizar operaciones o mostrar información sobre las fechas en la aplicación.</p>
+
+<h2 align="center">'LocalDate.__.is'</h2>
+
+<p>La clase LocalDate en Java proporciona varios métodos que permiten realizar comparaciones y verificar propiedades de una fecha específica.</p>
+
+<h3 align="center">Métodos de Comparación de Fechas:</h3>
+
+<h3>isEqual()</h3>
+-    <b>Descripción</b>: Compara si la fecha es igual a otra fecha.
+-    <b>Ejemplo</b>
