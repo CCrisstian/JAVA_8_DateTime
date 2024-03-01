@@ -439,3 +439,81 @@ String nombreDia = diaActual.getDisplayName(TextStyle.FULL, Locale.getDefault())
 ```
 
 <p><b>'DayOfWeek'</b> es útil cuando se necesita representar y trabajar con días específicos de la semana en programas Java, y proporciona métodos que facilitan la manipulación y obtención de información sobre los días de la semana.</p>
+
+<h2 align="center">'LocalTime'</h2>
+<p>La clase <b>'LocalTime'</b> en Java, parte del paquete java.time, representa una hora del día sin considerar la fecha ni la zona horaria.</p>
+
+<h3>Creación de Instancias:</h3>
+
+-    <b>Por valores explícitos:</b>
+```java
+LocalTime hora = LocalTime.of(12, 30, 45); // 12:30:45
+```
+
+-    <b>Parseo de una cadena:</b>
+```java
+LocalTime horaParseada = LocalTime.parse("15:20:30"); // 15:20:30
+```
+
+-    <b>Obtener la hora actual:</b>
+```java
+LocalTime horaActual = LocalTime.now();
+```
+
+<h3>Métodos Útiles:</h3>
+
+-    <b>getHour()</b>
+-    <b>getMinute()</b>
+-    <b>getSecond()</b>
+-    <b>getNano()</b>
+
+Devuelven respectivamente la hora, el minuto, el segundo y el componente de nano segundos de la hora actual.
+```java
+int hora = horaActual.getHour(); // Devuelve la hora actual
+int minuto = horaActual.getMinute(); // Devuelve el minuto actual
+```
+
+-    <b>plusHours(long hours)</b>
+-    <b>minusHours(long hours)</b>
+-    <b>plusMinutes(long minutes)</b>
+-    <b>minusMinutes(long minutes)</b>
+-    <b>plusSeconds(long seconds)</b>
+-    <b>minusSeconds(long seconds)</b>
+-    <b>plusNanos(long nanos)</b>
+-    <b>minusNanos(long nanos)</b>
+
+Permiten agregar o restar una cantidad específica de horas, minutos, segundos o nano segundos a la hora actual.
+```java
+LocalTime horaFutura = horaActual.plusHours(3); // Hora actual + 3 horas
+LocalTime horaPasada = horaActual.minusMinutes(15); // Hora actual - 15 minutos
+```
+
+-    <b>isBefore(LocalTime other)</b>
+-    <b>isAfter(LocalTime other)</b>
+
+Comprueban si la hora actual es antes o después de otra hora especificada.
+```java
+boolean esAntes = horaActual.isBefore(LocalTime.NOON); // Comprueba si la hora actual es antes del mediodía
+```
+
+-    <b>withHour(int hour)</b>
+-    <b>withMinute(int minute)</b>
+-    <b>withSecond(int second)</b>
+-    <b>withNano(int nanoOfSecond)</b>
+
+Devuelven una copia de la hora actual con el componente de hora, minuto, segundo o nano segundos ajustado al valor especificado.
+```java
+LocalTime nuevaHora = horaActual.withHour(18); // Hora actual con la hora ajustada a las 18:00
+```
+
+<h3>Ejemplo de Uso:</h3>
+
+```java
+LocalTime horaActual = LocalTime.now();
+System.out.println("Hora actual: " + horaActual);
+
+LocalTime nuevaHora = horaActual.plusHours(2).minusMinutes(30);
+System.out.println("Nueva hora: " + nuevaHora);
+```
+
+<p>Este ejemplo crea una instancia de LocalTime representando la hora actual, y luego crea una nueva hora ajustando dos horas hacia adelante y restando 30 minutos. LocalTime proporciona métodos convenientes para manipular y trabajar con horas sin preocuparse por la fecha ni la zona horaria.</p>
