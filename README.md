@@ -348,3 +348,94 @@ boolean esBisiesto = LocalDate.now().isLeapYear();
 ```
 
 <p>Estos métodos <b>'is'</b> son útiles para realizar comparaciones y verificar propiedades específicas de las fechas en el programa. Se puede utilizar según las necesidades de la aplicación para tomar decisiones basadas en la relación temporal entre diferentes fechas.</p>
+
+<h2 align="center">'Month' y 'Year'</h2>
+
+<h2>'Month'</h2>
+<p>La clase <b>'Month'</b> representa un mes del año.</p>
+
+<h3>Valores Constantes:</h3>
+
+-    <b>Month:</b> tiene un conjunto fijo de instancias predefinidas para cada mes del año (desde JANUARY hasta DECEMBER).
+
+-    Se puede acceder a estas instancias utilizando las constantes de la clase, como Month.JANUARY, Month.FEBRUARY, etc.
+-    
+<h3>Métodos Útiles:</h3>
+
+-    <b>getDisplayName(TextStyle style, Locale locale):</b> Devuelve el nombre del mes en el estilo y el idioma especificados.
+
+-    <b>getValue():</b> Devuelve el valor numérico del mes (1 para enero, 2 para febrero, etc.).
+
+-    <b>of(int month):</b> Obtiene una instancia de Month a partir del valor numérico del mes.
+
+<b>Ejemplo:</b>
+
+```java
+Month mesActual = Month.FEBRUARY;
+int valorNumerico = mesActual.getValue(); // Devuelve 2
+String nombreMes = mesActual.getDisplayName(TextStyle.FULL, Locale.getDefault()); // Devuelve "febrero"
+```
+
+<h2>'Year'</h2>
+<p>La clase <b>'Year'</b> representa un año completo.</p>
+
+<h3>Creación de Instancias:</h3>
+
+-    Se puede crear instancias de Year mediante su constructor, por ejemplo, Year.of(2022).
+
+ <h3>Métodos Útiles:</h3> 
+
+-    <b>getValue():</b> Devuelve el valor numérico del año.
+
+-    <b>isLeap():</b> Verifica si el año es bisiesto.
+
+-   <b>plusYears(long years):</b> Retorna una copia del año con la cantidad especificada de años añadidos.
+
+-    <b>minusYears(long years):</b> Retorna una copia del año con la cantidad especificada de años restados.
+
+<b>Ejemplo:</b>
+
+```java
+Year añoActual = Year.now();
+int valorNumericoAño = añoActual.getValue(); // Devuelve el año actual
+boolean esBisiesto = añoActual.isLeap(); // Devuelve true o false
+Year añoFuturo = añoActual.plusYears(5); // Retorna el año actual + 5
+```
+
+<p>Estas clases son parte del paquete java.time introducido en Java 8 para manejar de manera más eficiente operaciones relacionadas con el tiempo y fechas. Proporcionan métodos útiles y tipos seguros para trabajar con meses y años.</p>
+
+<h2 align="center">'DayOfWeek()'</h2>
+<p>En Java, <b>'DayOfWeek'</b> es una enumeración que representa los días de la semana. Cada día de la semana tiene un valor numérico asociado, comenzando desde el lunes (que tiene un valor de 1) hasta el domingo (que tiene un valor de 7).</p>
+
+<h3>Creación de Instancias:</h3>
+<p>Se puede obtener instancias de DayOfWeek utilizando las constantes predefinidas de la enumeración:</p>
+
+```java
+DayOfWeek lunes = DayOfWeek.MONDAY;
+DayOfWeek domingo = DayOfWeek.SUNDAY;
+```
+
+<h3>Métodos Útiles:</h3>
+
+-    <b>getValue()</b>: Devuelve el valor numérico asociado al día de la semana (1 para lunes, 2 para martes, ..., 7 para domingo).
+```java
+int valorNumerico = DayOfWeek.TUESDAY.getValue(); // Devuelve 2
+```
+-    <b>plus(long days) y minus(long days)</b>: Estos métodos permiten agregar o restar una cantidad específica de días al día de la semana actual.
+```java
+DayOfWeek proximoMartes = DayOfWeek.TUESDAY.plus(7); // Devuelve el próximo martes
+```
+-    <b>getDisplayName(TextStyle style, Locale locale)</b>: Devuelve el nombre del día de la semana en el estilo y el idioma especificados.
+```java
+String nombreLunes = DayOfWeek.MONDAY.getDisplayName(TextStyle.FULL, Locale.getDefault()); // Devuelve el nombre completo del lunes en el idioma predeterminado
+```
+
+<h3>Ejemplo de Uso:</h3>
+
+```java
+DayOfWeek diaActual = DayOfWeek.SATURDAY;
+int valorNumerico = diaActual.getValue(); // Devuelve 6
+String nombreDia = diaActual.getDisplayName(TextStyle.FULL, Locale.getDefault()); // Devuelve "sábado"
+```
+
+<p><b>'DayOfWeek'</b> es útil cuando se necesita representar y trabajar con días específicos de la semana en programas Java, y proporciona métodos que facilitan la manipulación y obtención de información sobre los días de la semana.</p>
