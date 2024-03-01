@@ -517,3 +517,33 @@ System.out.println("Nueva hora: " + nuevaHora);
 ```
 
 <p>Este ejemplo crea una instancia de LocalTime representando la hora actual, y luego crea una nueva hora ajustando dos horas hacia adelante y restando 30 minutos. LocalTime proporciona métodos convenientes para manipular y trabajar con horas sin preocuparse por la fecha ni la zona horaria.</p>
+
+<h3>'LocalTime.MAX' y 'LocalTime.MIN'</h3>
+<p><b>'LocalTime.MAX'</b> y <b>'LocalTime.MIN'</b> son constantes predefinidas en la clase LocalTime de Java y representan respectivamente el tiempo máximo y mínimo posible en un día.</p>
+<h3><b>'LocalTime.MAX'</b></h3>
+-    <b>Descripción</b>: Representa el tiempo máximo posible en un día. Es equivalente a las 23:59:59.999999999.
+-    <b>Uso:</b>
+
+```java
+LocalTime tiempoMaximo = LocalTime.MAX;
+```
+
+<h3><b>'LocalTime.MIN'</b></h3>
+-    <b>Descripción</b>: Representa el tiempo mínimo posible en un día. Es equivalente a las 00:00:00.000000000.
+-    <b>Uso:</b>
+
+```java
+LocalTime tiempoMinimo = LocalTime.MIN;
+```
+<p>Estas constantes son útiles en situaciones donde se necesita representar límites de tiempo. Por ejemplo, se està trabajando con un rango de tiempo y se desea establecer un límite superior o inferior, se puede usar LocalTime.MAX o LocalTime.MIN respectivamente.</p>
+
+<b>Ejemplo:</b>
+```java
+LocalTime tiempoMaximo = LocalTime.MAX;
+LocalTime tiempoMinimo = LocalTime.MIN;
+
+System.out.println("Tiempo máximo: " + tiempoMaximo); // Imprime 23:59:59.999999999
+System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.000000000
+```
+
+<p>Se debe tener en cuenta que estas constantes están en el contexto de un día específico, y su uso es especialmente útil cuando se necesita representar extremos temporales en un rango de fechas sin preocuparse por la fecha completa.</p>
