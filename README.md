@@ -37,3 +37,49 @@
 -  <b>Period</b>: cantidad de tiempo representada en días, meses y años
 
 -  <b>DateTimeFormatter</b>: para dar formato a nuestras fechas.
+
+
+<h2 align="center">'LocalDateTime', 'LocalDate', y 'LocalTime'</h2>
+
+<p><b>'LocalDateTime'</b>, <b>'LocalDate'</b>, y <b>'LocalTime'</b> son clases pertenecientes al paquete java.time introducido en Java 8 para manejar fechas y horas de manera más efectiva que las clases Date y Calendar.</p>
+
+<h3>LocalDateTime</h3>
+
+-  <b>Descripción</b>: Representa una fecha y hora sin referencia a una zona horaria específica.
+-  <b>Características</b>:
+    -  Contiene información sobre año, mes, día, hora, minuto, segundo y fracción de segundo.
+    -  Es inmutable, lo que significa que no se puede modificar una vez creado.
+    -  Puede ser utilizado para representar fechas y horas en un contexto local sin preocuparse por la zona horaria.
+-  <b>Ejemplo</b>:
+
+```java
+LocalDateTime ahora = LocalDateTime.now();
+```
+
+<h3>LocalDate</h3>
+
+-  <b>Descripción</b>: Representa una fecha sin referencia a una zona horaria específica.
+-  <b>Características</b>:
+    -  Contiene información sobre año, mes y día.
+    -  Es inmutable.
+    -  Puede ser utilizado para representar solo la fecha, sin preocuparse por la hora y la zona horaria.
+-  <b>Ejemplo</b>:
+
+```java
+LocalDate fechaActual = LocalDate.now();
+```
+
+<h3>LocalTime</h3>
+
+-  <b>Descripción</b>: Representa una hora sin referencia a una zona horaria específica.
+-  <b>Características</b>:
+    -  Contiene información sobre hora, minuto, segundo y fracción de segundo.
+    -  Es inmutable.
+    -  Puede ser utilizado para representar solo la hora, sin preocuparse por la fecha y la zona horaria.
+-  <b>Ejemplo</b>:
+
+```java
+LocalTime horaActual = LocalTime.now();
+```
+
+<p>Estas clases facilitan la manipulación y representación de fechas y horas en aplicaciones Java, proporcionando una API más moderna y flexible. Se pueden realizar operaciones como comparaciones, adiciones y sustracciones de tiempo de manera más intuitiva y sin preocuparse por la complejidad asociada con las clases antiguas Date y Calendar.</p>
