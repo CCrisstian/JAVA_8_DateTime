@@ -108,10 +108,12 @@ System.out.println("Fecha actual: " + fechaActual);
 <p>El método <b>'LocalDate.of(int año, int mes, int día)'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para crear una instancia de LocalDate con una fecha específica.</p>
 
 -    <b>Descripción:</b> Crea una instancia de LocalDate con la fecha especificada.
+-    
 -    <b>Parámetros:</b>
     -    <b>año</b>: El año deseado.
     -    <b>mes</b>: El mes deseado (1 para enero, 2 para febrero, etc.).
     -    <b>día</b>: El día deseado del mes.
+    
 -    <b>Ejemplo</b>:
 
 ```java
