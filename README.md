@@ -520,8 +520,11 @@ System.out.println("Nueva hora: " + nuevaHora);
 
 <h3>'LocalTime.MAX' y 'LocalTime.MIN'</h3>
 <p><b>'LocalTime.MAX'</b> y <b>'LocalTime.MIN'</b> son constantes predefinidas en la clase LocalTime de Java y representan respectivamente el tiempo máximo y mínimo posible en un día.</p>
+
 <h3><b>'LocalTime.MAX'</b></h3>
+
 -    <b>Descripción</b>: Representa el tiempo máximo posible en un día. Es equivalente a las 23:59:59.999999999.
+  
 -    <b>Uso:</b>
 
 ```java
@@ -529,7 +532,9 @@ LocalTime tiempoMaximo = LocalTime.MAX;
 ```
 
 <h3><b>'LocalTime.MIN'</b></h3>
+
 -    <b>Descripción</b>: Representa el tiempo mínimo posible en un día. Es equivalente a las 00:00:00.000000000.
+  
 -    <b>Uso:</b>
 
 ```java
