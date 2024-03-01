@@ -83,3 +83,21 @@ LocalTime horaActual = LocalTime.now();
 ```
 
 <p>Estas clases facilitan la manipulación y representación de fechas y horas en aplicaciones Java, proporcionando una API más moderna y flexible. Se pueden realizar operaciones como comparaciones, adiciones y sustracciones de tiempo de manera más intuitiva y sin preocuparse por la complejidad asociada con las clases antiguas Date y Calendar.</p>
+
+<h2 align="center">LocalDate.now()</h2>
+
+<p>El método <b>'LocalDate.now()'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para obtener la fecha actual del sistema en la zona horaria predeterminada.</p>
+
+-    <b>Descripción</b>: Retorna una instancia de LocalDate que representa la fecha actual.
+
+-    <b>Uso</b>:
+
+```java
+LocalDate fechaActual = LocalDate.now();
+```
+
+-    <b>Características</b>:
+        -    La fecha se obtiene en función del reloj del sistema y la zona horaria del sistema.
+        -    La instancia LocalDate generada no tiene información sobre la hora específica del día, solo representa el año, mes y día.
+
+<p>Este método es útil cuando se necesita trabajar con fechas y no se esta interesado en la información de la hora o la zona horaria. Proporciona una forma sencilla de obtener la fecha actual en el formato LocalDate para su posterior manipulación en tu programa.</p>
