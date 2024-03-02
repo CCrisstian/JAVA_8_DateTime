@@ -74,7 +74,7 @@ System.out.println("Fecha parseada: " + fechaParseada);
 <h2 align="center">'LocalDate.now().plus'</h2>
 <p>El método <b>'LocalDate.now().plus'</b> en Java permite agregar una cantidad específica de días, semanas, meses o años a la fecha actual obtenida mediante LocalDate.now().</p>
 
-<b>plusDays()</h3>b>: Retorna una copia de la fecha actual con la cantidad especificada de días añadidos.
+<b><b>plusDays()</b>: Retorna una copia de la fecha actual con la cantidad especificada de días añadidos.
   
 -    <b>Ejemplo</b>:
 ```java
@@ -142,25 +142,21 @@ System.out.println("Fecha pasada: " + fechaPasada);
 int año = LocalDate.now().getYear();
 ```
 <b>getMonth()</b>: Devuelve el mes de la fecha como un objeto Month.
-
 -    <b>Ejemplo:</b>
 ```java
 Month mes = LocalDate.now().getMonth();
 ```
 <b>getDayOfMonth()</b>: Devuelve el día del mes.
-
 -    <b>Ejemplo:</b>
 ```java
 int dia = LocalDate.now().getDayOfMonth();
 ```
 <b>getDayOfWeek()</b>: Devuelve el día de la semana como un objeto DayOfWeek.
-
 -    <b>Ejemplo:</b>
 ```java
 DayOfWeek diaSemana = LocalDate.now().getDayOfWeek();
 ```
 <b>getDayOfYear()</b>: Devuelve el día del año.
-
 -    <b>Ejemplo:</b>
 ```java
 int diaAño = LocalDate.now().getDayOfYear();
@@ -178,7 +174,6 @@ LocalDate otraFecha = LocalDate.of(2022, 2, 26);
 boolean esIgual = fechaActual.isEqual(otraFecha);
 ```
 <b>isBefore()</b>: Compara si la fecha es anterior a otra fecha.
-
 -    <b>Ejemplo:</b>
 ```java
 LocalDate fechaActual = LocalDate.now();
@@ -186,7 +181,6 @@ LocalDate otraFecha = LocalDate.of(2022, 2, 26);
 boolean esAntes = fechaActual.isBefore(otraFecha);
 ```
 <b>isAfter()</b>: Compara si la fecha es posterior a otra fecha.
-
 -    <b>Ejemplo:</b>
 ```java
 LocalDate fechaActual = LocalDate.now();
