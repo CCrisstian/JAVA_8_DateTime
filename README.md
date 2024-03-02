@@ -552,3 +552,30 @@ System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.00000
 ```
 
 <p>Se debe tener en cuenta que estas constantes están en el contexto de un día específico, y su uso es especialmente útil cuando se necesita representar extremos temporales en un rango de fechas sin preocuparse por la fecha completa.</p>
+
+<h2 align="center">'DateTimeFormatter'</h2>
+
+<p><b>'DateTimeFormatter'</b> en Java es una clase que proporciona un conjunto de patrones predefinidos y personalizables para formatear y analizar fechas y horas en objetos Temporal (como LocalDate, LocalTime, LocalDateTime, etc.). Permite convertir entre representaciones de texto y objetos Temporal.</p>
+
+<h3>Creación de Instancias:</h3>
+
+-    <b>ofPattern(String pattern)</b>: Crea un formateador utilizando un patrón de formato específico.
+        -    <b>y</b>: año
+        -    <b>M</b>: mes
+        -    <b>d</b>: día del mes
+        -    <b>H</b>: hora (formato de 24 horas)
+        -    <b>m</b>: minuto
+        -    <b>s</b>: segundo
+  ```java
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+```
+
+Por ejemplo:
+        -    "dd/MM/yyyy": formato de fecha "15/02/2022"
+        -    "HH:mm:ss": formato de hora "10:30:00"
+        -    "dd/MM/yyyy HH:mm:ss": formato de fecha y hora "15/02/2022 10:30:00"
+
+-    <b>Patrones Predefinidos</b>: Utiliza patrones predefinidos que cubren formatos comunes.
+  ```java
+DateTimeFormatter isoDateFormatter = DateTimeFormatter.ISO_DATE;
+```
