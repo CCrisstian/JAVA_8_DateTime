@@ -566,6 +566,7 @@ System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.00000
         -    <b>H</b>: hora (formato de 24 horas)
         -    <b>m</b>: minuto
         -    <b>s</b>: segundo
+
 Por ejemplo:
 -    <b>"dd/MM/yyyy"</b>: formato de fecha "15/02/2022" 
 -    <b>"HH:mm:ss"</b>: formato de hora "10:30:00"
@@ -579,3 +580,38 @@ DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
   ```java
 DateTimeFormatter isoDateFormatter = DateTimeFormatter.ISO_DATE;
 ```
+
+<h3>Métodos Útiles:</h3>
+
+-    <b>format(Temporal temporal)</b>: Convierte un objeto Temporal en una cadena utilizando el formato especificado por el formateador.
+```java
+LocalDateTime ahora = LocalDateTime.now();
+String cadenaFormateada = formatter.format(ahora);
+```
+
+-    <b>parse(CharSequence text)</b>: Convierte una cadena en un objeto Temporal utilizando el formato especificado por el formateador.
+ ```java
+String cadenaFecha = "2022-02-26 14:30:00";
+LocalDateTime fechaParseada = formatter.parse(cadenaFecha, LocalDateTime::from);
+```
+ 
+-    <b>withLocale(Locale locale) y withZone(ZoneId zone)</b>: Permite especificar el idioma y la zona horaria a utilizar en el formateo y análisis.
+```java
+DateTimeFormatter formatterConLocale = formatter.withLocale(Locale.FRENCH);
+```
+
+Ejemplo de Uso:
+```java
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+LocalDateTime ahora = LocalDateTime.now();
+
+// Formatear fecha y hora
+String cadenaFormateada = formatter.format(ahora);
+System.out.println("Fecha y hora formateadas: " + cadenaFormateada);
+
+// Parsear cadena a objeto LocalDateTime
+String cadenaFecha = "2022-02-26 14:30:00";
+LocalDateTime fechaParseada = formatter.parse(cadenaFecha, LocalDateTime::from);
+System.out.println("Fecha parseada: " + fechaParseada);
+```
+<p>Este ejemplo muestra cómo formatear una fecha y hora actual a una cadena y cómo parsear una cadena en un objeto LocalDateTime.</p>
