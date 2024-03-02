@@ -75,7 +75,6 @@ System.out.println("Fecha parseada: " + fechaParseada);
 <p>El método <b>'LocalDate.now().plus'</b> en Java permite agregar una cantidad específica de días, semanas, meses o años a la fecha actual obtenida mediante LocalDate.now().</p>
 
 <b><b>plusDays()</b>: Retorna una copia de la fecha actual con la cantidad especificada de días añadidos.
-  
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusDays(5);
