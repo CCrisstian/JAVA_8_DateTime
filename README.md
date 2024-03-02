@@ -7,27 +7,30 @@
 - Son inmutables
 - seguridad del hilo
 
-<h3>LocalDateTime</h3> Representa una fecha y hora sin referencia a una zona horaria específica.
-    -  Contiene información sobre año, mes, día, hora, minuto, segundo y fracción de segundo.
-    -  Es inmutable, lo que significa que no se puede modificar una vez creado.
-    -  Puede ser utilizado para representar fechas y horas en un contexto local sin preocuparse por la zona horaria.
--  <b>Ejemplo</b>:
+<h3>LocalDateTime</h3>
+
+-    Representa una fecha y hora sin referencia a una zona horaria específica.
+-  Contiene información sobre año, mes, día, hora, minuto, segundo y fracción de segundo.
+-  Es inmutable, lo que significa que no se puede modificar una vez creado.
+-  Puede ser utilizado para representar fechas y horas en un contexto local sin preocuparse por la zona horaria.
 ```java
 LocalDateTime ahora = LocalDateTime.now();
 ```
-<h3>LocalDate</h3>: Representa una fecha sin referencia a una zona horaria específica.
-    -  Contiene información sobre año, mes y día.
-    -  Es inmutable.
-    -  Puede ser utilizado para representar solo la fecha, sin preocuparse por la hora y la zona horaria.
--  <b>Ejemplo</b>:
+<h3>LocalDate</h3>
+
+-    Representa una fecha sin referencia a una zona horaria específica.
+-  Contiene información sobre año, mes y día.
+-  Es inmutable.
+-  Puede ser utilizado para representar solo la fecha, sin preocuparse por la hora y la zona horaria.
 ```java
 LocalDate fechaActual = LocalDate.now();
 ```
-<h3>LocalTime</h3>: Representa una hora sin referencia a una zona horaria específica.
-    -  Contiene información sobre hora, minuto, segundo y fracción de segundo.
-    -  Es inmutable.
-    -  Puede ser utilizado para representar solo la hora, sin preocuparse por la fecha y la zona horaria.
--  <b>Ejemplo</b>:
+<h3>LocalTime</h3>
+
+-    Representa una hora sin referencia a una zona horaria específica.
+-  Contiene información sobre hora, minuto, segundo y fracción de segundo.
+-  Es inmutable.
+-  Puede ser utilizado para representar solo la hora, sin preocuparse por la fecha y la zona horaria.
 ```java
 LocalTime horaActual = LocalTime.now();
 ```
