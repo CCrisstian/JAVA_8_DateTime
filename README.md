@@ -531,5 +531,44 @@ System.out.println("Fecha parseada: " + fechaParseada);
 <h3>Creación de Instancias:</h3>
 
 -    <b>of(int year, int month, int dayOfMonth, int hour, int minute)</b>: Crea una instancia con valores específicos para año, mes, día, hora y minuto.
+```java
+LocalDateTime fechaHora = LocalDateTime.of(2022, 2, 26, 14, 30);
+```
 -    <b>of(LocalDate date, LocalTime time)</b>: Combina una instancia de LocalDate y LocalTime en un LocalDateTime.
+```java
+LocalDate fecha = LocalDate.of(2022, 2, 26);
+LocalTime hora = LocalTime.of(14, 30);
+LocalDateTime fechaHora = LocalDateTime.of(fecha, hora);
+```
 -    <b>now()</b>: Obtiene la fecha y hora actuales.
+```java
+LocalDateTime ahora = LocalDateTime.now();
+```
+<h2 align="center">'DateTimeFormatter'</h2>
+
+-    <b>BASIC_ISO_DATE</b>: Representa la fecha en formato básico ISO 8601 (sin separadores), como "yyyyMMdd".
+        -    Ejemplo: "20220226" para el 26 de febrero de 2022.
+-    <b>ISO_DATE</b>: Representa la fecha en formato ISO 8601, como "yyyy-MM-dd".
+        -    Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
+-    <b>ISO_INSTANT</b>: Representa una marca de tiempo instantáneo en formato ISO 8601, incluyendo la fecha, hora y zona horaria en UTC.
+        -    Ejemplo: "2022-02-26T14:30:00Z".
+-    <b>ISO_LOCAL_DATE</b>: Representa la fecha sin zona horaria en formato ISO 8601, como "yyyy-MM-dd".
+        -    Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
+-    <b>ISO_LOCAL_DATE_TIME</b>: Representa la fecha y hora sin zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ss".
+        -    Ejemplo: "2022-02-26T14:30:00" para el 26 de febrero de 2022 a las 14:30.
+-    <b>ISO_LOCAL_TIME</b>: Representa la hora sin fecha ni zona horaria en formato ISO 8601, como "HH:mm:ss".
+        -    Ejemplo: "14:30:00" para las 14:30.
+-    <b>ISO_OFFSET_DATE</b>: Representa la fecha con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddZZ".
+        -    Ejemplo: "2022-02-26+05:00" para el 26 de febrero de 2022 con una compensación de +5 horas.
+-    <b>ISO_OFFSET_DATE_TIME</b>: Representa la fecha y hora con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ssZZ".
+        -    Ejemplo: "2022-02-26T14:30:00+05:00" para el 26 de febrero de 2022 a las 14:30 con una compensación de +5 horas.
+-    <b>ISO_OFFSET_TIME</b>: Representa la hora con compensación de zona horaria en formato ISO 8601, como "HH:mm:ssZZ".
+        -    Ejemplo: "14:30:00+05:00" para las 14:30 con una compensación de +5 horas.
+-    <b>ISO_ORDINAL_DATE</b>: Representa la fecha en formato ordinal ISO 8601, como "yyyy-DDD".
+        -    Ejemplo: "2022-057" para el día 57 de 2022 (26 de febrero).
+-    <b>ISO_TIME</b>: Representa la hora con zona horaria en formato ISO 8601, como "HH:mm:ssZZ".
+        -    Ejemplo: "14:30:00+00:00" para las 14:30 en UTC.
+-    <b>ISO_WEEK_DATE</b>: Representa la fecha en formato ISO 8601 con número de semana, como "yyyy-'W'ww-E".
+        -    Ejemplo: "2022-W08-6" para el sexto día (sábado) de la semana 8 de 2022.
+-    <b>ISO_ZONED_DATE_TIME</b>: Representa la fecha y hora con información de zona horaria en formato ISO 8601.
+        -    Ejemplo: "2022-02-26T14:30:00+05:00[Asia/Kolkata]".
