@@ -349,13 +349,11 @@ LocalTime horaActual = LocalTime.now();
 <p><b>'LocalTime.MAX'</b> y <b>'LocalTime.MIN'</b> son constantes predefinidas en la clase LocalTime de Java y representan respectivamente el tiempo máximo y mínimo posible en un día.</p>
 <b>'LocalTime.MAX'</b>: Representa el tiempo máximo posible en un día. Es equivalente a las 23:59:59.999999999.
 
--    <b>Uso:</b>
 ```java
 LocalTime tiempoMaximo = LocalTime.MAX;
 ```
 <b>'LocalTime.MIN'</b>: Representa el tiempo mínimo posible en un día. Es equivalente a las 00:00:00.000000000.
 
--    <b>Uso:</b>
 ```java
 LocalTime tiempoMinimo = LocalTime.MIN;
 ```
@@ -369,8 +367,6 @@ LocalTime tiempoMinimo = LocalTime.MIN;
 System.out.println("Tiempo máximo: " + tiempoMaximo); // Imprime 23:59:59.999999999
 System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.000000000
 ```
-
-<p>Se debe tener en cuenta que estas constantes están en el contexto de un día específico, y su uso es especialmente útil cuando se necesita representar extremos temporales en un rango de fechas sin preocuparse por la fecha completa.</p>
 <h2 align="center">'DateTimeFormatter'</h2>
 <p><b>'DateTimeFormatter'</b> en Java es una clase que proporciona un conjunto de patrones predefinidos y personalizables para formatear y analizar fechas y horas en objetos Temporal (como LocalDate, LocalTime, LocalDateTime, etc.). Permite convertir entre representaciones de texto y objetos Temporal.</p>
 <h3>Creación de Instancias:</h3>
