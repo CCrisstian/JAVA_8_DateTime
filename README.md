@@ -301,6 +301,7 @@ Year añoFuturo = añoActual.plusYears(5); // Retorna el año actual + 5
 <p>En Java, <b>'DayOfWeek'</b> es una enumeración que representa los días de la semana. Cada día de la semana tiene un valor numérico asociado, comenzando desde el lunes (que tiene un valor de 1) hasta el domingo (que tiene un valor de 7).</p>
 <h3>Creación de Instancias:</h3>
 <p>Se puede obtener instancias de DayOfWeek utilizando las constantes predefinidas de la enumeración:</p>
+
 ```java
 DayOfWeek lunes = DayOfWeek.MONDAY;
 DayOfWeek domingo = DayOfWeek.SUNDAY;
@@ -346,20 +347,15 @@ LocalTime horaActual = LocalTime.now();
 ```
 <h3>'LocalTime.MAX' y 'LocalTime.MIN'</h3>
 <p><b>'LocalTime.MAX'</b> y <b>'LocalTime.MIN'</b> son constantes predefinidas en la clase LocalTime de Java y representan respectivamente el tiempo máximo y mínimo posible en un día.</p>
-<h3><b>'LocalTime.MAX'</b></h3>
+<b>'LocalTime.MAX'</b>: Representa el tiempo máximo posible en un día. Es equivalente a las 23:59:59.999999999.
 
--    <b>Descripción</b>: Representa el tiempo máximo posible en un día. Es equivalente a las 23:59:59.999999999.
-  
 -    <b>Uso:</b>
 ```java
 LocalTime tiempoMaximo = LocalTime.MAX;
 ```
-<h3><b>'LocalTime.MIN'</b></h3>
+<b>'LocalTime.MIN'</b>: Representa el tiempo mínimo posible en un día. Es equivalente a las 00:00:00.000000000.
 
--    <b>Descripción</b>: Representa el tiempo mínimo posible en un día. Es equivalente a las 00:00:00.000000000.
-  
 -    <b>Uso:</b>
-
 ```java
 LocalTime tiempoMinimo = LocalTime.MIN;
 ```
