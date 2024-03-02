@@ -615,3 +615,13 @@ LocalDateTime fechaParseada = formatter.parse(cadenaFecha, LocalDateTime::from);
 System.out.println("Fecha parseada: " + fechaParseada);
 ```
 <p>Este ejemplo muestra cómo formatear una fecha y hora actual a una cadena y cómo parsear una cadena en un objeto LocalDateTime.</p>
+
+<h2 align="center">'LocalDateTime'</h2>
+
+<p><b>'LocalDateTime'</b> en Java, perteneciente al paquete java.time, es una clase que representa una fecha y hora sin zona horaria. Combina la fecha y la hora en un único objeto, permitiéndote trabajar con instancias que contienen ambos aspectos del tiempo.</p>
+
+<h3>Creación de Instancias:</h3>
+
+-    <b>of(int year, int month, int dayOfMonth, int hour, int minute)</b>: Crea una instancia con valores específicos para año, mes, día, hora y minuto.
+-    <b>of(LocalDate date, LocalTime time)</b>: Combina una instancia de LocalDate y LocalTime en un LocalDateTime.
+-    <b>now()</b>: Obtiene la fecha y hora actuales.
