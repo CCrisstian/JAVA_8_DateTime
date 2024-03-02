@@ -5,43 +5,9 @@
 <h3>Características:</h3>
 
 - La API es muy clara, concisa y fácil de entender como la numeración de los campos
-
 - Tiene muchas representaciones de tiempo diferentes, cada una adecuada para diferentes casos de uso
-
 - Son inmutables
-
 - seguridad del hilo
-
-<h3>Representaciones de fecha y tiempo:</h3>
-
--  <b>Instant</b>: representa un punto en el tiempo (marca de tiempo)
-
--  <b>LocalDate</b>: representa una fecha (año, mes, día)
-
--  <b>LocalDateTime</b>: igual que LocalDate, pero incluye la hora con precisión en nanosegundos
-
--  <b>OffsetDateTime</b>: igual que LocalDateTime, pero con ajuste de zona horaria
-
--  <b>LocalTime</b>: hora con precisión de nanosegundos y sin información de fecha
-
--  <b>ZonedDateTime</b>: igual que OffsetDateTime, pero incluye un ID de zona horaria
-
--  <b>OffsetLocalTime</b>: igual que LocalTime, pero con ajuste de zona horaria
-
--  <b>MonthDay</b>: mes y día, sin año ni hora
-
--  <b>YearMonth</b>: mes y año, sin día ni hora
-
--  <b>Duration</b>: cantidad de tiempo representada en segundos, minutos y horas. Tiene precisión de nanosegundos
-
--  <b>Period</b>: cantidad de tiempo representada en días, meses y años
-
--  <b>DateTimeFormatter</b>: para dar formato a nuestras fechas.
-
-
-<h2 align="center">'LocalDateTime', 'LocalDate', y 'LocalTime'</h2>
-
-<p><b>'LocalDateTime'</b>, <b>'LocalDate'</b>, y <b>'LocalTime'</b> son clases pertenecientes al paquete java.time introducido en Java 8 para manejar fechas y horas de manera más efectiva que las clases Date y Calendar.</p>
 
 <h3>LocalDateTime</h3>
 
@@ -187,7 +153,7 @@ System.out.println("Fecha futura: " + fechaFutura);
 
 <p>Estos métodos  permiten manipular la fecha actual y obtener una nueva fecha ajustada según las necesidades específicas. Se puede ajustar la fecha agregando días, semanas, meses o años según el contexto de la aplicación.</p>
 
-<h2>'LocalDate.now().minus'</h2>
+<h2 align="center">'LocalDate.now().minus'</h2>
 
 <p>El método <b>'LocalDate.now().minus'</b> en Java permite restar una cantidad específica de días, semanas, meses o años a la fecha actual obtenida mediante LocalDate.now().</p>
 
@@ -459,64 +425,6 @@ LocalTime horaParseada = LocalTime.parse("15:20:30"); // 15:20:30
 ```java
 LocalTime horaActual = LocalTime.now();
 ```
-
-<h3>Métodos Útiles:</h3>
-
--    <b>getHour()</b>
--    <b>getMinute()</b>
--    <b>getSecond()</b>
--    <b>getNano()</b>
-
-Devuelven respectivamente la hora, el minuto, el segundo y el componente de nano segundos de la hora actual.
-```java
-int hora = horaActual.getHour(); // Devuelve la hora actual
-int minuto = horaActual.getMinute(); // Devuelve el minuto actual
-```
-
--    <b>plusHours(long hours)</b>
--    <b>minusHours(long hours)</b>
--    <b>plusMinutes(long minutes)</b>
--    <b>minusMinutes(long minutes)</b>
--    <b>plusSeconds(long seconds)</b>
--    <b>minusSeconds(long seconds)</b>
--    <b>plusNanos(long nanos)</b>
--    <b>minusNanos(long nanos)</b>
-
-Permiten agregar o restar una cantidad específica de horas, minutos, segundos o nano segundos a la hora actual.
-```java
-LocalTime horaFutura = horaActual.plusHours(3); // Hora actual + 3 horas
-LocalTime horaPasada = horaActual.minusMinutes(15); // Hora actual - 15 minutos
-```
-
--    <b>isBefore(LocalTime other)</b>
--    <b>isAfter(LocalTime other)</b>
-
-Comprueban si la hora actual es antes o después de otra hora especificada.
-```java
-boolean esAntes = horaActual.isBefore(LocalTime.NOON); // Comprueba si la hora actual es antes del mediodía
-```
-
--    <b>withHour(int hour)</b>
--    <b>withMinute(int minute)</b>
--    <b>withSecond(int second)</b>
--    <b>withNano(int nanoOfSecond)</b>
-
-Devuelven una copia de la hora actual con el componente de hora, minuto, segundo o nano segundos ajustado al valor especificado.
-```java
-LocalTime nuevaHora = horaActual.withHour(18); // Hora actual con la hora ajustada a las 18:00
-```
-
-<h3>Ejemplo de Uso:</h3>
-
-```java
-LocalTime horaActual = LocalTime.now();
-System.out.println("Hora actual: " + horaActual);
-
-LocalTime nuevaHora = horaActual.plusHours(2).minusMinutes(30);
-System.out.println("Nueva hora: " + nuevaHora);
-```
-
-<p>Este ejemplo crea una instancia de LocalTime representando la hora actual, y luego crea una nueva hora ajustando dos horas hacia adelante y restando 30 minutos. LocalTime proporciona métodos convenientes para manipular y trabajar con horas sin preocuparse por la fecha ni la zona horaria.</p>
 
 <h3>'LocalTime.MAX' y 'LocalTime.MIN'</h3>
 <p><b>'LocalTime.MAX'</b> y <b>'LocalTime.MIN'</b> son constantes predefinidas en la clase LocalTime de Java y representan respectivamente el tiempo máximo y mínimo posible en un día.</p>
