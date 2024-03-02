@@ -80,21 +80,18 @@ LocalDate fechaFutura = LocalDate.now().plusDays(5);
 System.out.println("Fecha futura: " + fechaFutura);
 ```
 <b>plusWeeks()</b>: Retorna una copia de la fecha actual con la cantidad especificada de semanas añadidas.
-  
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusWeeks(2);
 System.out.println("Fecha futura: " + fechaFutura);
 ```
 <b>plusMonths()</b>: Retorna una copia de la fecha actual con la cantidad especificada de meses añadidos.
-  
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusMonths(3);
 System.out.println("Fecha futura: " + fechaFutura);
 ```
 <b>plusYears()</b>: Retorna una copia de la fecha actual con la cantidad especificada de años añadidos.
-  
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusYears(1);
@@ -110,21 +107,18 @@ LocalDate fechaPasada = LocalDate.now().minusDays(5);
 System.out.println("Fecha pasada: " + fechaPasada);
 ```
 <b>minusWeeks()</b>: Retorna una copia de la fecha actual con la cantidad especificada de semanas restadas.
-
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaPasada = LocalDate.now().minusWeeks(2);
 System.out.println("Fecha pasada: " + fechaPasada);
 ```
 <b>minusMonths()</b>: Retorna una copia de la fecha actual con la cantidad especificada de meses restados.
-
 -    <b>Ejemplo:</b>
 ```java
 LocalDate fechaPasada = LocalDate.now().minusMonths(3);
 System.out.println("Fecha pasada: " + fechaPasada);
 ```
 <b>minusYears()</b>: Retorna una copia de la fecha actual con la cantidad especificada de años restados.
-
 -    <b>Ejemplo:</b>
 ```java
 LocalDate fechaPasada = LocalDate.now().minusYears(1);
@@ -237,7 +231,6 @@ boolean esBisiesto = añoActual.isLeap(); // Devuelve true o false
 Year añoFuturo = añoActual.plusYears(5); // Retorna el año actual + 5
 ```
 <p>Estas clases son parte del paquete java.time introducido en Java 8 para manejar de manera más eficiente operaciones relacionadas con el tiempo y fechas. Proporcionan métodos útiles y tipos seguros para trabajar con meses y años.</p>
-
 <h2 align="center">'DayOfWeek()'</h2>
 <p>En Java, <b>'DayOfWeek'</b> es una enumeración que representa los días de la semana. Cada día de la semana tiene un valor numérico asociado, comenzando desde el lunes (que tiene un valor de 1) hasta el domingo (que tiene un valor de 7).</p>
 <h3>Creación de Instancias:</h3>
@@ -261,7 +254,6 @@ DayOfWeek proximoMartes = DayOfWeek.TUESDAY.plus(7); // Devuelve el próximo mar
 ```java
 String nombreLunes = DayOfWeek.MONDAY.getDisplayName(TextStyle.FULL, Locale.getDefault()); // Devuelve el nombre completo del lunes en el idioma predeterminado
 ```
-
 <h3>Ejemplo de Uso:</h3>
 
 ```java
@@ -319,7 +311,6 @@ System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.00000
         -    <b>H</b>: hora (formato de 24 horas)
         -    <b>m</b>: minuto
         -    <b>s</b>: segundo
-
 Por ejemplo:
 -    <b>"dd/MM/yyyy"</b>: formato de fecha "15/02/2022" 
 -    <b>"HH:mm:ss"</b>: formato de hora "10:30:00"
