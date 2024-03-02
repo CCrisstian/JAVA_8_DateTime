@@ -566,14 +566,14 @@ System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.00000
         -    <b>H</b>: hora (formato de 24 horas)
         -    <b>m</b>: minuto
         -    <b>s</b>: segundo
-  ```java
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-```
-
 Por ejemplo:
 -    <b>"dd/MM/yyyy"</b>: formato de fecha "15/02/2022" 
 -    <b>"HH:mm:ss"</b>: formato de hora "10:30:00"
 -    <b>"dd/MM/yyyy HH:mm:ss"</b>: formato de fecha y hora "15/02/2022 10:30:00"
+
+  ```java
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+```
 
 -    <b>Patrones Predefinidos</b>: Utiliza patrones predefinidos que cubren formatos comunes.
   ```java
