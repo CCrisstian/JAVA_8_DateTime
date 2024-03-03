@@ -319,7 +319,20 @@ Por ejemplo:
 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 ```
 -    <b>Patrones Predefinidos</b>: Utiliza patrones predefinidos que cubren formatos comunes.
-  ```java
+        -    <b>BASIC_ISO_DATE</b>: Representa la fecha en formato básico ISO 8601 (sin separadores), como "yyyyMMdd". Ejemplo: "20220226" para el 26 de febrero de 2022.
+        -    <b>ISO_DATE</b>: Representa la fecha en formato ISO 8601, como "yyyy-MM-dd". Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
+        -    <b>ISO_INSTANT</b>: Representa una marca de tiempo instantáneo en formato ISO 8601, incluyendo la fecha, hora y zona horaria en UTC. Ejemplo: "2022-02-26T14:30:00Z".
+        -    <b>ISO_LOCAL_DATE</b>: Representa la fecha sin zona horaria en formato ISO 8601, como "yyyy-MM-dd". Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
+        -    <b>ISO_LOCAL_DATE_TIME</b>: Representa la fecha y hora sin zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ss". Ejemplo: "2022-02-26T14:30:00" para el 26 de febrero de 2022 a las 14:30.
+        -    <b>ISO_LOCAL_TIME</b>: Representa la hora sin fecha ni zona horaria en formato ISO 8601, como "HH:mm:ss". Ejemplo: "14:30:00" para las 14:30.
+        -    <b>ISO_OFFSET_DATE</b>: Representa la fecha con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddZZ". Ejemplo: "2022-02-26+05:00" para el 26 de febrero de 2022 con una compensación de +5 horas.
+        -    <b>ISO_OFFSET_DATE_TIME</b>: Representa la fecha y hora con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ssZZ". Ejemplo: "2022-02-26T14:30:00+05:00" para el 26 de febrero de 2022 a las 14:30 con una compensación de +5 horas.
+                -    <b>ISO_OFFSET_TIME</b>: Representa la hora con compensación de zona horaria en formato ISO 8601, como "HH:mm:ssZZ". Ejemplo: "14:30:00+05:00" para las 14:30 con una compensación de +5 horas.
+        -    <b>ISO_ORDINAL_DATE</b>: Representa la fecha en formato ordinal ISO 8601, como "yyyy-DDD". Ejemplo: "2022-057" para el día 57 de 2022 (26 de febrero).
+        -    <b>ISO_TIME</b>: Representa la hora con zona horaria en formato ISO 8601, como "HH:mm:ssZZ". Ejemplo: "14:30:00+00:00" para las 14:30 en UTC.
+        -    <b>ISO_WEEK_DATE</b>: Representa la fecha en formato ISO 8601 con número de semana, como "yyyy-'W'ww-E". Ejemplo: "2022-W08-6" para el sexto día (sábado) de la semana 8 de 2022.
+        -    <b>ISO_ZONED_DATE_TIME</b>: Representa la fecha y hora con información de zona horaria en formato ISO 8601. Ejemplo: "2022-02-26T14:30:00+05:00[Asia/Kolkata]".
+```java
 DateTimeFormatter isoDateFormatter = DateTimeFormatter.ISO_DATE;
 ```
 <h3>Métodos Útiles:</h3>
@@ -371,31 +384,42 @@ LocalDateTime fechaHora = LocalDateTime.of(fecha, hora);
 ```java
 LocalDateTime ahora = LocalDateTime.now();
 ```
-<h2 align="center">'DateTimeFormatter'</h2>
+<h2 align="center">'ZonedDateTime'</h2>
+<p><b>'ZonedDateTime'</b> en Java, perteneciente al paquete java.time, es una clase que representa una fecha y hora en un contexto de zona horaria específico. Combina la información de LocalDateTime con la información de la zona horaria para proporcionar una representación completa del tiempo</p>
+<h3>Creación de Instancias:</h3>
 
--    <b>BASIC_ISO_DATE</b>: Representa la fecha en formato básico ISO 8601 (sin separadores), como "yyyyMMdd".
-        -    Ejemplo: "20220226" para el 26 de febrero de 2022.
--    <b>ISO_DATE</b>: Representa la fecha en formato ISO 8601, como "yyyy-MM-dd".
-        -    Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
--    <b>ISO_INSTANT</b>: Representa una marca de tiempo instantáneo en formato ISO 8601, incluyendo la fecha, hora y zona horaria en UTC.
-        -    Ejemplo: "2022-02-26T14:30:00Z".
--    <b>ISO_LOCAL_DATE</b>: Representa la fecha sin zona horaria en formato ISO 8601, como "yyyy-MM-dd".
-        -    Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
--    <b>ISO_LOCAL_DATE_TIME</b>: Representa la fecha y hora sin zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ss".
-        -    Ejemplo: "2022-02-26T14:30:00" para el 26 de febrero de 2022 a las 14:30.
--    <b>ISO_LOCAL_TIME</b>: Representa la hora sin fecha ni zona horaria en formato ISO 8601, como "HH:mm:ss".
-        -    Ejemplo: "14:30:00" para las 14:30.
--    <b>ISO_OFFSET_DATE</b>: Representa la fecha con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddZZ".
-        -    Ejemplo: "2022-02-26+05:00" para el 26 de febrero de 2022 con una compensación de +5 horas.
--    <b>ISO_OFFSET_DATE_TIME</b>: Representa la fecha y hora con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ssZZ".
-        -    Ejemplo: "2022-02-26T14:30:00+05:00" para el 26 de febrero de 2022 a las 14:30 con una compensación de +5 horas.
--    <b>ISO_OFFSET_TIME</b>: Representa la hora con compensación de zona horaria en formato ISO 8601, como "HH:mm:ssZZ".
-        -    Ejemplo: "14:30:00+05:00" para las 14:30 con una compensación de +5 horas.
--    <b>ISO_ORDINAL_DATE</b>: Representa la fecha en formato ordinal ISO 8601, como "yyyy-DDD".
-        -    Ejemplo: "2022-057" para el día 57 de 2022 (26 de febrero).
--    <b>ISO_TIME</b>: Representa la hora con zona horaria en formato ISO 8601, como "HH:mm:ssZZ".
-        -    Ejemplo: "14:30:00+00:00" para las 14:30 en UTC.
--    <b>ISO_WEEK_DATE</b>: Representa la fecha en formato ISO 8601 con número de semana, como "yyyy-'W'ww-E".
-        -    Ejemplo: "2022-W08-6" para el sexto día (sábado) de la semana 8 de 2022.
--    <b>ISO_ZONED_DATE_TIME</b>: Representa la fecha y hora con información de zona horaria en formato ISO 8601.
-        -    Ejemplo: "2022-02-26T14:30:00+05:00[Asia/Kolkata]".
+-    <b>of(LocalDateTime localDateTime, ZoneId zone)</b>: Combina una instancia de LocalDateTime con una ZoneId para crear un ZonedDateTime.
+```java
+LocalDateTime fechaHoraLocal = LocalDateTime.of(2022, 2, 26, 14, 30);
+ZoneId zonaHoraria = ZoneId.of("America/New_York");
+ZonedDateTime fechaHoraZonificada = ZonedDateTime.of(fechaHoraLocal, zonaHoraria);
+```
+
+-    <b>ofInstant(Instant instant, ZoneId zone)</b>: Crea una instancia de ZonedDateTime a partir de un Instant y una ZoneId.
+```java
+Instant instante = Instant.now();
+ZoneId zonaHoraria = ZoneId.of("Europe/Paris");
+ZonedDateTime fechaHoraZonificada = ZonedDateTime.ofInstant(instante, zonaHoraria);
+```
+
+-    <b>now()</b>: Obtiene la fecha y hora actuales en el contexto de la zona horaria predeterminada del sistema.
+```java
+ZonedDateTime ahora = ZonedDateTime.now();
+```
+
+<h3>Métodos Útiles:</h3>
+
+-    toLocalDateTime(): Devuelve una instancia de LocalDateTime que representa la fecha y hora sin la información de la zona horaria.
+```java
+LocalDateTime fechaHoraLocal = fechaHoraZonificada.toLocalDateTime();
+```
+-    withZoneSameInstant(ZoneId zone): Devuelve una nueva instancia de ZonedDateTime con la misma fecha y hora, pero en una zona horaria diferente.
+```java
+ZoneId nuevaZonaHoraria = ZoneId.of("Asia/Tokyo");
+ZonedDateTime fechaHoraEnTokyo = fechaHoraZonificada.withZoneSameInstant(nuevaZonaHoraria);
+```
+-    withZoneSameLocal(ZoneId zone): Devuelve una nueva instancia de ZonedDateTime con la misma fecha y hora local, pero en una zona horaria diferente.
+```java
+ZoneId nuevaZonaHoraria = ZoneId.of("Australia/Sydney");
+ZonedDateTime fechaHoraEnSydney = fechaHoraZonificada.withZoneSameLocal(nuevaZonaHoraria);
+```
