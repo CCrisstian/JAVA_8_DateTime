@@ -430,3 +430,46 @@ ZoneId zonaHoraria = ZoneId.of("America/New_York");
 
 ZonedDateTime zonedDateTime = localDateTime.atZone(zonaHoraria);
 ```
+<h2 align="center">'Duration', 'Instant' y 'Period'</h2>
+<p>En Java, las clases Duration, Instant y Period están relacionadas con la representación y manipulación de intervalos de tiempo, puntos específicos en el tiempo y períodos entre fechas respectivamente. </p>
+
+<h3>Duration</h3>
+Representa un intervalo de tiempo con precisión en términos de horas, minutos, segundos y nanosegundos. Se utiliza para medir la duración entre dos instantes.
+
+```java
+Instant inicio = Instant.now();
+Instant fin = Instant.now().plusSeconds(60);
+
+Duration duracion = Duration.between(inicio, fin);
+System.out.println("Duración: " + duracion);
+```
+-    'of' y 'ofDays', 'ofHours', 'ofMinutes', 'ofSeconds', 'ofMillis', 'ofNanos': Métodos estáticos para crear instancias de Duration.
+-    'between': Método estático para calcular la duración entre dos instantes.
+-    'plus' y 'minus': Para agregar o restar una duración a un instante.
+-    'toDays', 'toHours', 'toMinutes', 'toSeconds', 'toMillis', 'toNanos': Métodos para obtener la duración en diferentes unidades.
+
+<h3>Instant</h3>
+Representa un punto específico en el tiempo en UTC, sin información de zona horaria ni fecha. Se utiliza para obtener marcas de tiempo exactas y comparar instantes en el tiempo.
+
+```java
+Instant ahora = Instant.now();
+System.out.println("Instante actual: " + ahora);
+```
+-    'now': Método estático para obtener la marca de tiempo actual.
+-    'plus' y 'minus': Para agregar o restar una duración a un instante.
+-    'isBefore' y 'isAfter': Para comparar instantes.
+-    'atZone': Para convertir un Instant a un ZonedDateTime en una zona horaria específica.
+<h3>Period</h3>
+Representa un período de tiempo con precisión en términos de años, meses y días. Se utiliza para medir la diferencia entre dos fechas sin tener en cuenta las horas, minutos y segundos.
+
+```java
+LocalDate fechaInicio = LocalDate.of(2022, 2, 26);
+LocalDate fechaFin = LocalDate.of(2022, 3, 5);
+
+Period periodo = Period.between(fechaInicio, fechaFin);
+System.out.println("Período: " + periodo);
+```
+-    'of' y 'ofYears', 'ofMonths', 'ofDays': Métodos estáticos para crear instancias de `Period`.
+-    'between': Método estático para calcular el período entre dos fechas.
+-    'plus' y 'minus': Para agregar o restar un período a una fecha.
+-    'getYears', 'getMonths', 'getDays': Métodos para obtener los componentes del período.
