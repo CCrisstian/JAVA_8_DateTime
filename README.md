@@ -37,6 +37,7 @@ LocalTime horaActual = LocalTime.now();
 <p>Estas clases facilitan la manipulación y representación de fechas y horas en aplicaciones Java, proporcionando una API más moderna y flexible. Se pueden realizar operaciones como comparaciones, adiciones y sustracciones de tiempo de manera más intuitiva y sin preocuparse por la complejidad asociada con las clases antiguas Date y Calendar.</p>
 <h2 align="center">'LocalDate.now()'</h2>
 <p>El método <b>'LocalDate.now()'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para obtener la fecha actual del sistema en la zona horaria predeterminada.</p>
+
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaActual = LocalDate.now();
@@ -47,7 +48,7 @@ System.out.println("Fecha actual: " + fechaActual);
         -    La instancia LocalDate generada no tiene información sobre la hora específica del día, solo representa el año, mes y día.
 
 <h2 align="center">'LocalDate.of()'</h2>
-<p>El método <b>'LocalDate.of(int año, int mes, int día)'</b> en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para crear una instancia de LocalDate con una fecha específica.</p>
+<p>El método `LocalDate.of(int año, int mes, int día)` en Java pertenece a la clase LocalDate del paquete java.time. Este método se utiliza para crear una instancia de LocalDate con una fecha específica.</p>
 
 -    <b>Parámetros:</b>
         -    <b>año</b>: El año deseado.
@@ -73,25 +74,25 @@ System.out.println("Fecha parseada: " + fechaParseada);
 <h2 align="center">'LocalDate.now().plus'</h2>
 <p>El método <b>'LocalDate.now().plus'</b> en Java permite agregar una cantidad específica de días, semanas, meses o años a la fecha actual obtenida mediante LocalDate.now().</p>
 
-<b><b>plusDays()</b>: Retorna una copia de la fecha actual con la cantidad especificada de días añadidos.
+`plusDays()`: Retorna una copia de la fecha actual con la cantidad especificada de días añadidos.
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusDays(5);
 System.out.println("Fecha futura: " + fechaFutura);
 ```
-<b>plusWeeks()</b>: Retorna una copia de la fecha actual con la cantidad especificada de semanas añadidas.
+`plusWeeks()`: Retorna una copia de la fecha actual con la cantidad especificada de semanas añadidas.
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusWeeks(2);
 System.out.println("Fecha futura: " + fechaFutura);
 ```
-<b>plusMonths()</b>: Retorna una copia de la fecha actual con la cantidad especificada de meses añadidos.
+`plusMonths()`: Retorna una copia de la fecha actual con la cantidad especificada de meses añadidos.
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusMonths(3);
 System.out.println("Fecha futura: " + fechaFutura);
 ```
-<b>plusYears()</b>: Retorna una copia de la fecha actual con la cantidad especificada de años añadidos.
+`plusYears()`: Retorna una copia de la fecha actual con la cantidad especificada de años añadidos.
 -    <b>Ejemplo</b>:
 ```java
 LocalDate fechaFutura = LocalDate.now().plusYears(1);
@@ -99,27 +100,23 @@ System.out.println("Fecha futura: " + fechaFutura);
 ```
 <h2 align="center">'LocalDate.now().minus'</h2>
 <p>El método <b>'LocalDate.now().minus'</b> en Java permite restar una cantidad específica de días, semanas, meses o años a la fecha actual obtenida mediante LocalDate.now().</p>
-<b>minusDays()</b>: Retorna una copia de la fecha actual con la cantidad especificada de días restados.
 
--    <b>Ejemplo</b>:
+-    `minusDays()`: Retorna una copia de la fecha actual con la cantidad especificada de días restados.
 ```java
 LocalDate fechaPasada = LocalDate.now().minusDays(5);
 System.out.println("Fecha pasada: " + fechaPasada);
 ```
-<b>minusWeeks()</b>: Retorna una copia de la fecha actual con la cantidad especificada de semanas restadas.
--    <b>Ejemplo</b>:
+-    `minusWeeks()`: Retorna una copia de la fecha actual con la cantidad especificada de semanas restadas.
 ```java
 LocalDate fechaPasada = LocalDate.now().minusWeeks(2);
 System.out.println("Fecha pasada: " + fechaPasada);
 ```
-<b>minusMonths()</b>: Retorna una copia de la fecha actual con la cantidad especificada de meses restados.
--    <b>Ejemplo:</b>
+-    `minusMonths()`: Retorna una copia de la fecha actual con la cantidad especificada de meses restados.
 ```java
 LocalDate fechaPasada = LocalDate.now().minusMonths(3);
 System.out.println("Fecha pasada: " + fechaPasada);
 ```
-<b>minusYears()</b>: Retorna una copia de la fecha actual con la cantidad especificada de años restados.
--    <b>Ejemplo:</b>
+-    `minusYears()`: Retorna una copia de la fecha actual con la cantidad especificada de años restados.
 ```java
 LocalDate fechaPasada = LocalDate.now().minusYears(1);
 System.out.println("Fecha pasada: " + fechaPasada);
@@ -127,29 +124,24 @@ System.out.println("Fecha pasada: " + fechaPasada);
 <p>Estos métodos permiten manipular la fecha actual y obtener una nueva fecha ajustada restando días, semanas, meses o años según necesidades específicas. Se puede utilizarlos para calcular fechas en el pasado.</p>
 <h2 align="center">'LocalDate.__.get'</h2>
 <p>La clase LocalDate en Java proporciona métodos para obtener diferentes componentes de una fecha.</p>
-<b>getYear()</b>: Devuelve el año de la fecha.
 
--    <b>Ejemplo:</b>
+-    `getYear()`: Devuelve el año de la fecha.
 ```java
 int año = LocalDate.now().getYear();
 ```
-<b>getMonth()</b>: Devuelve el mes de la fecha como un objeto Month.
--    <b>Ejemplo:</b>
+-    `getMonth()`: Devuelve el mes de la fecha como un objeto Month.
 ```java
 Month mes = LocalDate.now().getMonth();
 ```
-<b>getDayOfMonth()</b>: Devuelve el día del mes.
--    <b>Ejemplo:</b>
+-    `getDayOfMonth()`: Devuelve el día del mes.
 ```java
 int dia = LocalDate.now().getDayOfMonth();
 ```
-<b>getDayOfWeek()</b>: Devuelve el día de la semana como un objeto DayOfWeek.
--    <b>Ejemplo:</b>
+-    `getDayOfWeek()`: Devuelve el día de la semana como un objeto DayOfWeek.
 ```java
 DayOfWeek diaSemana = LocalDate.now().getDayOfWeek();
 ```
-<b>getDayOfYear()</b>: Devuelve el día del año.
--    <b>Ejemplo:</b>
+-    `getDayOfYear()`: Devuelve el día del año.
 ```java
 int diaAño = LocalDate.now().getDayOfYear();
 ```
@@ -157,54 +149,45 @@ int diaAño = LocalDate.now().getDayOfYear();
 <h2 align="center">'LocalDate.__.is'</h2>
 <p>La clase LocalDate en Java proporciona varios métodos que permiten realizar comparaciones y verificar propiedades de una fecha específica.</p>
 <h3 align="center">Métodos de Comparación de Fechas:</h3>
-<b>isEqual()</b>: Compara si la fecha es igual a otra fecha.
-  
--    <b>Ejemplo:</b>
+
+-    `isEqual()`: Compara si la fecha es igual a otra fecha.
 ```java
 LocalDate fechaActual = LocalDate.now();
 LocalDate otraFecha = LocalDate.of(2022, 2, 26);
 boolean esIgual = fechaActual.isEqual(otraFecha);
 ```
-<b>isBefore()</b>: Compara si la fecha es anterior a otra fecha.
--    <b>Ejemplo:</b>
+-    `isBefore()`: Compara si la fecha es anterior a otra fecha.
 ```java
 LocalDate fechaActual = LocalDate.now();
 LocalDate otraFecha = LocalDate.of(2022, 2, 26);
 boolean esAntes = fechaActual.isBefore(otraFecha);
 ```
-<b>isAfter()</b>: Compara si la fecha es posterior a otra fecha.
--    <b>Ejemplo:</b>
+-    `isAfter()`: Compara si la fecha es posterior a otra fecha.
 ```java
 LocalDate fechaActual = LocalDate.now();
 LocalDate otraFecha = LocalDate.of(2022, 2, 26);
 boolean esDespues = fechaActual.isAfter(otraFecha);
 ```
 <h3 align="center">Métodos de Verificación de Propiedades de Fecha:</h3>
-<b>isLeapYear()</b>: Verifica si el año de la fecha es un año bisiesto.
 
--    <b>Ejemplo:</b>
+`isLeapYear()`: Verifica si el año de la fecha es un año bisiesto.
 ```java
 boolean esBisiesto = LocalDate.now().isLeapYear();
 ```
-<p>Estos métodos <b>'is'</b> son útiles para realizar comparaciones y verificar propiedades específicas de las fechas en el programa. Se puede utilizar según las necesidades de la aplicación para tomar decisiones basadas en la relación temporal entre diferentes fechas.</p>
+<p>Estos métodos `is` son útiles para realizar comparaciones y verificar propiedades específicas de las fechas en el programa. Se puede utilizar según las necesidades de la aplicación para tomar decisiones basadas en la relación temporal entre diferentes fechas.</p>
 <h2 align="center">'Month' y 'Year'</h2>
 <h2>'Month'</h2>
 <p>La clase <b>'Month'</b> representa un mes del año.</p>
 <h3>Valores Constantes:</h3>
 
--    <b>Month:</b> tiene un conjunto fijo de instancias predefinidas para cada mes del año (desde JANUARY hasta DECEMBER).
-
+-    `Month`: tiene un conjunto fijo de instancias predefinidas para cada mes del año (desde JANUARY hasta DECEMBER).
 -    Se puede acceder a estas instancias utilizando las constantes de la clase, como Month.JANUARY, Month.FEBRUARY, etc.
   
 <h3>Métodos Útiles:</h3>
 
--    <b>getDisplayName(TextStyle style, Locale locale):</b> Devuelve el nombre del mes en el estilo y el idioma especificados.
-
--    <b>getValue():</b> Devuelve el valor numérico del mes (1 para enero, 2 para febrero, etc.).
-
--    <b>of(int month):</b> Obtiene una instancia de Month a partir del valor numérico del mes.
-
-<b>Ejemplo:</b>
+-    `getDisplayName(TextStyle style, Locale locale)`: Devuelve el nombre del mes en el estilo y el idioma especificados.
+-    `getValue()`: Devuelve el valor numérico del mes (1 para enero, 2 para febrero, etc.).
+-    `of(int month)`: Obtiene una instancia de Month a partir del valor numérico del mes.
 ```java
 Month mesActual = Month.FEBRUARY;
 int valorNumerico = mesActual.getValue(); // Devuelve 2
@@ -214,16 +197,14 @@ String nombreMes = mesActual.getDisplayName(TextStyle.FULL, Locale.getDefault())
 <p>La clase <b>'Year'</b> representa un año completo.</p>
 <h3>Creación de Instancias:</h3>
 
--    Se puede crear instancias de Year mediante su constructor, por ejemplo, Year.of(2022).
+-    Se puede crear instancias de Year mediante su constructor, por ejemplo, `Year.of`(2022).
 
  <h3>Métodos Útiles:</h3> 
 
--    <b>getValue():</b> Devuelve el valor numérico del año.
--    <b>isLeap():</b> Verifica si el año es bisiesto.
--   <b>plusYears(long years):</b> Retorna una copia del año con la cantidad especificada de años añadidos.
--    <b>minusYears(long years):</b> Retorna una copia del año con la cantidad especificada de años restados.
-
-<b>Ejemplo:</b>
+-    `getValue()`: Devuelve el valor numérico del año.
+-    `isLeap()`:Verifica si el año es bisiesto.
+-   `plusYears(long years)`:Retorna una copia del año con la cantidad especificada de años añadidos.
+-    `minusYears(long years)`:Retorna una copia del año con la cantidad especificada de años restados.
 ```java
 Year añoActual = Year.now();
 int valorNumericoAño = añoActual.getValue(); // Devuelve el año actual
@@ -232,7 +213,7 @@ Year añoFuturo = añoActual.plusYears(5); // Retorna el año actual + 5
 ```
 <p>Estas clases son parte del paquete java.time introducido en Java 8 para manejar de manera más eficiente operaciones relacionadas con el tiempo y fechas. Proporcionan métodos útiles y tipos seguros para trabajar con meses y años.</p>
 <h2 align="center">'DayOfWeek()'</h2>
-<p>En Java, <b>'DayOfWeek'</b> es una enumeración que representa los días de la semana. Cada día de la semana tiene un valor numérico asociado, comenzando desde el lunes (que tiene un valor de 1) hasta el domingo (que tiene un valor de 7).</p>
+<p>En Java, `DayOfWeek` es una enumeración que representa los días de la semana. Cada día de la semana tiene un valor numérico asociado, comenzando desde el lunes (que tiene un valor de 1) hasta el domingo (que tiene un valor de 7).</p>
 <h3>Creación de Instancias:</h3>
 <p>Se puede obtener instancias de DayOfWeek utilizando las constantes predefinidas de la enumeración:</p>
 
@@ -242,15 +223,15 @@ DayOfWeek domingo = DayOfWeek.SUNDAY;
 ```
 <h3>Métodos Útiles:</h3>
 
--    <b>getValue()</b>: Devuelve el valor numérico asociado al día de la semana (1 para lunes, 2 para martes, ..., 7 para domingo).
+-    `getValue()`: Devuelve el valor numérico asociado al día de la semana (1 para lunes, 2 para martes, ..., 7 para domingo).
 ```java
 int valorNumerico = DayOfWeek.TUESDAY.getValue(); // Devuelve 2
 ```
--    <b>plus(long days) y minus(long days)</b>: Estos métodos permiten agregar o restar una cantidad específica de días al día de la semana actual.
+-    `plus(long days) y minus(long days)`: Estos métodos permiten agregar o restar una cantidad específica de días al día de la semana actual.
 ```java
 DayOfWeek proximoMartes = DayOfWeek.TUESDAY.plus(7); // Devuelve el próximo martes
 ```
--    <b>getDisplayName(TextStyle style, Locale locale)</b>: Devuelve el nombre del día de la semana en el estilo y el idioma especificados.
+-    `getDisplayName(TextStyle style, Locale locale)`: Devuelve el nombre del día de la semana en el estilo y el idioma especificados.
 ```java
 String nombreLunes = DayOfWeek.MONDAY.getDisplayName(TextStyle.FULL, Locale.getDefault()); // Devuelve el nombre completo del lunes en el idioma predeterminado
 ```
@@ -261,7 +242,7 @@ DayOfWeek diaActual = DayOfWeek.SATURDAY;
 int valorNumerico = diaActual.getValue(); // Devuelve 6
 String nombreDia = diaActual.getDisplayName(TextStyle.FULL, Locale.getDefault()); // Devuelve "sábado"
 ```
-<p><b>'DayOfWeek'</b> es útil cuando se necesita representar y trabajar con días específicos de la semana en programas Java, y proporciona métodos que facilitan la manipulación y obtención de información sobre los días de la semana.</p>
+<p>`DayOfWeek` es útil cuando se necesita representar y trabajar con días específicos de la semana en programas Java, y proporciona métodos que facilitan la manipulación y obtención de información sobre los días de la semana.</p>
 <h2 align="center">'LocalTime'</h2>
 <p>La clase <b>'LocalTime'</b> en Java, parte del paquete java.time, representa una hora del día sin considerar la fecha ni la zona horaria.</p>
 <h3>Creación de Instancias:</h3>
@@ -280,13 +261,12 @@ LocalTime horaActual = LocalTime.now();
 ```
 <h3>'LocalTime.MAX' y 'LocalTime.MIN'</h3>
 <p><b>'LocalTime.MAX'</b> y <b>'LocalTime.MIN'</b> son constantes predefinidas en la clase LocalTime de Java y representan respectivamente el tiempo máximo y mínimo posible en un día.</p>
-<b>'LocalTime.MAX'</b>: Representa el tiempo máximo posible en un día. Es equivalente a las 23:59:59.999999999.
 
+`LocalTime.MAX`: Representa el tiempo máximo posible en un día. Es equivalente a las 23:59:59.999999999.
 ```java
 LocalTime tiempoMaximo = LocalTime.MAX;
 ```
-<b>'LocalTime.MIN'</b>: Representa el tiempo mínimo posible en un día. Es equivalente a las 00:00:00.000000000.
-
+`LocalTime.MIN`: Representa el tiempo mínimo posible en un día. Es equivalente a las 00:00:00.000000000.
 ```java
 LocalTime tiempoMinimo = LocalTime.MIN;
 ```
@@ -301,10 +281,10 @@ System.out.println("Tiempo máximo: " + tiempoMaximo); // Imprime 23:59:59.99999
 System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.000000000
 ```
 <h2 align="center">'DateTimeFormatter'</h2>
-<p><b>'DateTimeFormatter'</b> en Java es una clase que proporciona un conjunto de patrones predefinidos y personalizables para formatear y analizar fechas y horas en objetos Temporal (como LocalDate, LocalTime, LocalDateTime, etc.). Permite convertir entre representaciones de texto y objetos Temporal.</p>
+<p>`DateTimeFormatter` en Java es una clase que proporciona un conjunto de patrones predefinidos y personalizables para formatear y analizar fechas y horas en objetos Temporal (como LocalDate, LocalTime, LocalDateTime, etc.). Permite convertir entre representaciones de texto y objetos Temporal.</p>
 <h3>Creación de Instancias:</h3>
 
--    <b>ofPattern(String pattern)</b>: Crea un formateador utilizando un patrón de formato específico.
+-    `ofPattern(String pattern)`: Crea un formateador utilizando un patrón de formato específico.
         -    <b>y</b>: año
         -    <b>M</b>: mes
         -    <b>d</b>: día del mes
@@ -312,42 +292,42 @@ System.out.println("Tiempo mínimo: " + tiempoMinimo); // Imprime 00:00:00.00000
         -    <b>m</b>: minuto
         -    <b>s</b>: segundo
 Por ejemplo:
--    <b>"dd/MM/yyyy"</b>: formato de fecha "15/02/2022" 
--    <b>"HH:mm:ss"</b>: formato de hora "10:30:00"
--    <b>"dd/MM/yyyy HH:mm:ss"</b>: formato de fecha y hora "15/02/2022 10:30:00"
+-    `"dd/MM/yyyy"`: formato de fecha "15/02/2022" 
+-    `"HH:mm:ss"`: formato de hora "10:30:00"
+-    `"dd/MM/yyyy HH:mm:ss"`: formato de fecha y hora "15/02/2022 10:30:00"
   ```java
 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 ```
 -    <b>Patrones Predefinidos</b>: Utiliza patrones predefinidos que cubren formatos comunes.
-        -    <b>BASIC_ISO_DATE</b>: Representa la fecha en formato básico ISO 8601 (sin separadores), como "yyyyMMdd". Ejemplo: "20220226" para el 26 de febrero de 2022.
-        -    <b>ISO_DATE</b>: Representa la fecha en formato ISO 8601, como "yyyy-MM-dd". Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
-        -    <b>ISO_INSTANT</b>: Representa una marca de tiempo instantáneo en formato ISO 8601, incluyendo la fecha, hora y zona horaria en UTC. Ejemplo: "2022-02-26T14:30:00Z".
-        -    <b>ISO_LOCAL_DATE</b>: Representa la fecha sin zona horaria en formato ISO 8601, como "yyyy-MM-dd". Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
-        -    <b>ISO_LOCAL_DATE_TIME</b>: Representa la fecha y hora sin zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ss". Ejemplo: "2022-02-26T14:30:00" para el 26 de febrero de 2022 a las 14:30.
-        -    <b>ISO_LOCAL_TIME</b>: Representa la hora sin fecha ni zona horaria en formato ISO 8601, como "HH:mm:ss". Ejemplo: "14:30:00" para las 14:30.
-        -    <b>ISO_OFFSET_DATE</b>: Representa la fecha con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddZZ". Ejemplo: "2022-02-26+05:00" para el 26 de febrero de 2022 con una compensación de +5 horas.
-        -    <b>ISO_OFFSET_DATE_TIME</b>: Representa la fecha y hora con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ssZZ". Ejemplo: "2022-02-26T14:30:00+05:00" para el 26 de febrero de 2022 a las 14:30 con una compensación de +5 horas.
-                -    <b>ISO_OFFSET_TIME</b>: Representa la hora con compensación de zona horaria en formato ISO 8601, como "HH:mm:ssZZ". Ejemplo: "14:30:00+05:00" para las 14:30 con una compensación de +5 horas.
-        -    <b>ISO_ORDINAL_DATE</b>: Representa la fecha en formato ordinal ISO 8601, como "yyyy-DDD". Ejemplo: "2022-057" para el día 57 de 2022 (26 de febrero).
-        -    <b>ISO_TIME</b>: Representa la hora con zona horaria en formato ISO 8601, como "HH:mm:ssZZ". Ejemplo: "14:30:00+00:00" para las 14:30 en UTC.
-        -    <b>ISO_WEEK_DATE</b>: Representa la fecha en formato ISO 8601 con número de semana, como "yyyy-'W'ww-E". Ejemplo: "2022-W08-6" para el sexto día (sábado) de la semana 8 de 2022.
-        -    <b>ISO_ZONED_DATE_TIME</b>: Representa la fecha y hora con información de zona horaria en formato ISO 8601. Ejemplo: "2022-02-26T14:30:00+05:00[Asia/Kolkata]".
+        -    `BASIC_ISO_DATE`: Representa la fecha en formato básico ISO 8601 (sin separadores), como "yyyyMMdd". Ejemplo: "20220226" para el 26 de febrero de 2022.
+        -    `ISO_DATE`: Representa la fecha en formato ISO 8601, como "yyyy-MM-dd". Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
+        -    `ISO_INSTANT`: Representa una marca de tiempo instantáneo en formato ISO 8601, incluyendo la fecha, hora y zona horaria en UTC. Ejemplo: "2022-02-26T14:30:00Z".
+        -    `ISO_LOCAL_DATE`: Representa la fecha sin zona horaria en formato ISO 8601, como "yyyy-MM-dd". Ejemplo: "2022-02-26" para el 26 de febrero de 2022.
+        -    `ISO_LOCAL_DATE_TIME`: Representa la fecha y hora sin zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ss". Ejemplo: "2022-02-26T14:30:00" para el 26 de febrero de 2022 a las 14:30.
+        -    `ISO_LOCAL_TIME`: Representa la hora sin fecha ni zona horaria en formato ISO 8601, como "HH:mm:ss". Ejemplo: "14:30:00" para las 14:30.
+        -    `ISO_OFFSET_DATE`: Representa la fecha con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddZZ". Ejemplo: "2022-02-26+05:00" para el 26 de febrero de 2022 con una compensación de +5 horas.
+        -    `ISO_OFFSET_DATE_TIME`: Representa la fecha y hora con compensación de zona horaria en formato ISO 8601, como "yyyy-MM-ddTHH:mm:ssZZ". Ejemplo: "2022-02-26T14:30:00+05:00" para el 26 de febrero de 2022 a las 14:30 con una compensación de +5 horas.
+        -    `ISO_OFFSET_TIME`: Representa la hora con compensación de zona horaria en formato ISO 8601, como "HH:mm:ssZZ". Ejemplo: "14:30:00+05:00" para las 14:30 con una compensación de +5 horas.
+        -    `ISO_ORDINAL_DATE`: Representa la fecha en formato ordinal ISO 8601, como "yyyy-DDD". Ejemplo: "2022-057" para el día 57 de 2022 (26 de febrero).
+        -    `ISO_TIME`: Representa la hora con zona horaria en formato ISO 8601, como "HH:mm:ssZZ". Ejemplo: "14:30:00+00:00" para las 14:30 en UTC.
+        -    `ISO_WEEK_DATE`: Representa la fecha en formato ISO 8601 con número de semana, como "yyyy-'W'ww-E". Ejemplo: "2022-W08-6" para el sexto día (sábado) de la semana 8 de 2022.
+        -    `ISO_ZONED_DATE_TIME`: Representa la fecha y hora con información de zona horaria en formato ISO 8601. Ejemplo: "2022-02-26T14:30:00+05:00[Asia/Kolkata]".
 ```java
 DateTimeFormatter isoDateFormatter = DateTimeFormatter.ISO_DATE;
 ```
 <h3>Métodos Útiles:</h3>
 
--    <b>format(Temporal temporal)</b>: Convierte un objeto Temporal en una cadena utilizando el formato especificado por el formateador.
+-    `format(Temporal temporal)`: Convierte un objeto Temporal en una cadena utilizando el formato especificado por el formateador.
 ```java
 LocalDateTime ahora = LocalDateTime.now();
 String cadenaFormateada = formatter.format(ahora);
 ```
--    <b>parse(CharSequence text)</b>: Convierte una cadena en un objeto Temporal utilizando el formato especificado por el formateador.
+-    `parse(CharSequence text)`: Convierte una cadena en un objeto Temporal utilizando el formato especificado por el formateador.
  ```java
 String cadenaFecha = "2022-02-26 14:30:00";
 LocalDateTime fechaParseada = formatter.parse(cadenaFecha, LocalDateTime::from);
 ```
--    <b>withLocale(Locale locale) y withZone(ZoneId zone)</b>: Permite especificar el idioma y la zona horaria a utilizar en el formateo y análisis.
+-    `withLocale(Locale locale)` y `withZone(ZoneId zone)`: Permite especificar el idioma y la zona horaria a utilizar en el formateo y análisis.
 ```java
 DateTimeFormatter formatterConLocale = formatter.withLocale(Locale.FRENCH);
 ```
@@ -367,63 +347,63 @@ System.out.println("Fecha parseada: " + fechaParseada);
 ```
 <p>Este ejemplo muestra cómo formatear una fecha y hora actual a una cadena y cómo parsear una cadena en un objeto LocalDateTime.</p>
 <h2 align="center">'LocalDateTime'</h2>
-<p><b>'LocalDateTime'</b> en Java, perteneciente al paquete java.time, es una clase que representa una fecha y hora sin zona horaria. Combina la fecha y la hora en un único objeto, permitiéndote trabajar con instancias que contienen ambos aspectos del tiempo.</p>
+<p>`LocalDateTime` en Java, perteneciente al paquete java.time, es una clase que representa una fecha y hora sin zona horaria. Combina la fecha y la hora en un único objeto, permitiéndote trabajar con instancias que contienen ambos aspectos del tiempo.</p>
 <h3>Creación de Instancias:</h3>
 
--    <b>of(int year, int month, int dayOfMonth, int hour, int minute)</b>: Crea una instancia con valores específicos para año, mes, día, hora y minuto.
+-    `of(int year, int month, int dayOfMonth, int hour, int minute)`: Crea una instancia con valores específicos para año, mes, día, hora y minuto.
 ```java
 LocalDateTime fechaHora = LocalDateTime.of(2022, 2, 26, 14, 30);
 ```
--    <b>of(LocalDate date, LocalTime time)</b>: Combina una instancia de LocalDate y LocalTime en un LocalDateTime.
+-    `of(LocalDate date, LocalTime time)`: Combina una instancia de LocalDate y LocalTime en un LocalDateTime.
 ```java
 LocalDate fecha = LocalDate.of(2022, 2, 26);
 LocalTime hora = LocalTime.of(14, 30);
 LocalDateTime fechaHora = LocalDateTime.of(fecha, hora);
 ```
--    <b>now()</b>: Obtiene la fecha y hora actuales.
+-    `now()`: Obtiene la fecha y hora actuales.
 ```java
 LocalDateTime ahora = LocalDateTime.now();
 ```
 <h2 align="center">'ZonedDateTime'</h2>
-<p><b>'ZonedDateTime'</b> en Java, perteneciente al paquete java.time, es una clase que representa una fecha y hora en un contexto de zona horaria específico. Combina la información de LocalDateTime con la información de la zona horaria para proporcionar una representación completa del tiempo</p>
+<p>`ZonedDateTime` en Java, perteneciente al paquete java.time, es una clase que representa una fecha y hora en un contexto de zona horaria específico. Combina la información de LocalDateTime con la información de la zona horaria para proporcionar una representación completa del tiempo</p>
 <h3>Creación de Instancias:</h3>
 
--    <b>of(LocalDateTime localDateTime, ZoneId zone)</b>: Combina una instancia de LocalDateTime con una ZoneId para crear un ZonedDateTime.
+-    `of(LocalDateTime localDateTime, ZoneId zone)`: Combina una instancia de LocalDateTime con una ZoneId para crear un ZonedDateTime.
 ```java
 LocalDateTime fechaHoraLocal = LocalDateTime.of(2022, 2, 26, 14, 30);
 ZoneId zonaHoraria = ZoneId.of("America/New_York");
 ZonedDateTime fechaHoraZonificada = ZonedDateTime.of(fechaHoraLocal, zonaHoraria);
 ```
 
--    <b>ofInstant(Instant instant, ZoneId zone)</b>: Crea una instancia de ZonedDateTime a partir de un Instant y una ZoneId.
+-    `ofInstant(Instant instant, ZoneId zone)`: Crea una instancia de ZonedDateTime a partir de un Instant y una ZoneId.
 ```java
 Instant instante = Instant.now();
 ZoneId zonaHoraria = ZoneId.of("Europe/Paris");
 ZonedDateTime fechaHoraZonificada = ZonedDateTime.ofInstant(instante, zonaHoraria);
 ```
 
--    <b>now()</b>: Obtiene la fecha y hora actuales en el contexto de la zona horaria predeterminada del sistema.
+-   `now()`: Obtiene la fecha y hora actuales en el contexto de la zona horaria predeterminada del sistema.
 ```java
 ZonedDateTime ahora = ZonedDateTime.now();
 ```
 
 <h3>Métodos Útiles:</h3>
 
--    toLocalDateTime(): Devuelve una instancia de LocalDateTime que representa la fecha y hora sin la información de la zona horaria.
+-    `toLocalDateTime()`: Devuelve una instancia de LocalDateTime que representa la fecha y hora sin la información de la zona horaria.
 ```java
 LocalDateTime fechaHoraLocal = fechaHoraZonificada.toLocalDateTime();
 ```
--    withZoneSameInstant(ZoneId zone): Devuelve una nueva instancia de ZonedDateTime con la misma fecha y hora, pero en una zona horaria diferente.
+-    `withZoneSameInstant(ZoneId zone)`: Devuelve una nueva instancia de ZonedDateTime con la misma fecha y hora, pero en una zona horaria diferente.
 ```java
 ZoneId nuevaZonaHoraria = ZoneId.of("Asia/Tokyo");
 ZonedDateTime fechaHoraEnTokyo = fechaHoraZonificada.withZoneSameInstant(nuevaZonaHoraria);
 ```
--    withZoneSameLocal(ZoneId zone): Devuelve una nueva instancia de ZonedDateTime con la misma fecha y hora local, pero en una zona horaria diferente.
+-    `withZoneSameLocal(ZoneId zone)`: Devuelve una nueva instancia de ZonedDateTime con la misma fecha y hora local, pero en una zona horaria diferente.
 ```java
 ZoneId nuevaZonaHoraria = ZoneId.of("Australia/Sydney");
 ZonedDateTime fechaHoraEnSydney = fechaHoraZonificada.withZoneSameLocal(nuevaZonaHoraria);
 ```
--    atZone: se utiliza para convertir un objeto Temporal en un ZonedDateTime al agregar información de zona horaria. Este método toma como argumento una instancia de ZoneId, que representa la zona horaria a la que se desea agregar el objeto Temporal.
+-    `atZone`: se utiliza para convertir un objeto Temporal en un ZonedDateTime al agregar información de zona horaria. Este método toma como argumento una instancia de ZoneId, que representa la zona horaria a la que se desea agregar el objeto Temporal.
 ```java
 LocalDateTime localDateTime = LocalDateTime.of(2022, 2, 26, 14, 30);
 ZoneId zonaHoraria = ZoneId.of("America/New_York");
@@ -431,7 +411,7 @@ ZoneId zonaHoraria = ZoneId.of("America/New_York");
 ZonedDateTime zonedDateTime = localDateTime.atZone(zonaHoraria);
 ```
 <h2 align="center">'Duration', 'Instant' y 'Period'</h2>
-<p>En Java, las clases Duration, Instant y Period están relacionadas con la representación y manipulación de intervalos de tiempo, puntos específicos en el tiempo y períodos entre fechas respectivamente. </p>
+<p>En Java, las clases `Duration`, `Instant` y `Period` están relacionadas con la representación y manipulación de intervalos de tiempo, puntos específicos en el tiempo y períodos entre fechas respectivamente. </p>
 
 <h3>Duration</h3>
 Representa un intervalo de tiempo con precisión en términos de horas, minutos, segundos y nanosegundos. Se utiliza para medir la duración entre dos instantes.
