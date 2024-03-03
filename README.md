@@ -1,5 +1,5 @@
 <h1 align="center">Date Time</h1>
-<p><b>'Date Time'</b> en Java se refiere a las clases y paquetes introducidos en Java 8 para manejar fechas y horas de manera más efectiva que las antiguas clases Date y Calendar</p>
+<p>`Date Time` en Java se refiere a las clases y paquetes introducidos en Java 8 para manejar fechas y horas de manera más efectiva que las antiguas clases Date y Calendar</p>
 <h3>Características:</h3>
 
 - La API es muy clara, concisa y fácil de entender como la numeración de los campos
