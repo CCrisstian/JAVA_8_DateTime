@@ -423,3 +423,10 @@ ZonedDateTime fechaHoraEnTokyo = fechaHoraZonificada.withZoneSameInstant(nuevaZo
 ZoneId nuevaZonaHoraria = ZoneId.of("Australia/Sydney");
 ZonedDateTime fechaHoraEnSydney = fechaHoraZonificada.withZoneSameLocal(nuevaZonaHoraria);
 ```
+-    atZone: se utiliza para convertir un objeto Temporal en un ZonedDateTime al agregar información de zona horaria. Este método toma como argumento una instancia de ZoneId, que representa la zona horaria a la que se desea agregar el objeto Temporal.
+```java
+LocalDateTime localDateTime = LocalDateTime.of(2022, 2, 26, 14, 30);
+ZoneId zonaHoraria = ZoneId.of("America/New_York");
+
+ZonedDateTime zonedDateTime = localDateTime.atZone(zonaHoraria);
+```
